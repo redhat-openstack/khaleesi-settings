@@ -1,0 +1,22 @@
+---
+tester:
+    name: tempest
+    cirros_image_file: cirros-0.3.1-x86_64-disk.img
+
+tempest:
+    additional_default_settings:
+        - section: compute
+          option: flavor_ref
+          value: 1
+
+job:
+    archive:
+        - '{{ tempest.dir }}/etc/tempest.conf'
+        - '{{ tempest.dir }}/etc/tempest.conf.sample'
+        - '{{ tempest.dir }}/*.log'
+        - '{{ tempest.dir }}/*.xml'
+
+nodes:
+    tester:
+        groups:
+            - tempest

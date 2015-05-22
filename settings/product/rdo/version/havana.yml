@@ -1,0 +1,36 @@
+tmp:
+    anchors:
+    - &rpmurl http://repos.fedorapeople.org/repos/openstack/openstack-havana/rdo-release-havana-9.noarch.rpm
+    - &repo_url http://repos.fedorapeople.org/repos/openstack/openstack-havana/
+
+product:
+    version: havana
+    short_version: ha
+    rpm:
+        CentOS: *rpmurl
+        Fedora: *rpmurl
+        RedHat: *rpmurl
+### NOTE ###
+# khaleesi require details about the production repo for all jobs since it does
+# a repodiff against production for all other repos.
+    repo:
+        production:         # by default have production available for all jobs
+            CentOS:
+                '6.5': !join [*repo_url, epel-6]
+                '6.6': !join [*repo_url, epel-6]
+            Fedora:
+                '19': !join [*repo_url, fedora-19]
+            RedHat:
+                '6.5': !join [*repo_url, epel-6]
+                '6.6': !join [*repo_url, epel-6]
+                '6.7': !join [*repo_url, epel-6]
+
+tempest:
+    rdo:
+        rpm: https://repos.fedorapeople.org/repos/openstack/openstack-icehouse/rdo-release-icehouse-4.noarch.rpm
+        version: icehouse
+    rpm:
+        version: 20140805
+    use_custom_repo: false
+
+

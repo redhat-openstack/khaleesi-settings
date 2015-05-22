@@ -1,0 +1,39 @@
+--- !extends:common/nodes.yml
+
+staypuft:
+  dns_interface: eth2
+  dhcp_interface: eth2
+
+foreman:
+    hostgroups:
+    - name: "quickstack::neutron::compute"
+      params:
+        - key: "ovs_tunnel_iface"
+          type: "string"
+          value: "eth1"
+        - key: "ovs_tunnel_types"
+          type: "array"
+          value:
+            - "gre"
+        - key: "auth_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "glance_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "neutron_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "nova_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+    - name: "quickstack::neutron::networker"
+      params:
+        - key: "ovs_tunnel_iface"
+          type: "string"
+          value: "eth1"
+        - key: "ovs_tunnel_types"
+          type: "array"
+          value:
+            - "gre"
+

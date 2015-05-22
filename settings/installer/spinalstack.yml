@@ -1,0 +1,23 @@
+installer:
+    name: spinalstack
+    short_name: spsk
+
+job:
+    archive:
+        - /root/
+        - /var/log/
+        - /var/lib/mysql
+        - /etc/nova
+        - /etc/ceilometer
+        - /etc/cinder
+        - /etc/glance
+        - /etc/keystone
+        - /etc/neutron
+        - /etc/swift
+        - /etc/heat
+        - /etc/libvirt
+        - /etc/rabbitmq
+        - /etc/ntp
+        - /etc/puppet
+        - /etc/qpid
+        - /etc/qpidd.conf

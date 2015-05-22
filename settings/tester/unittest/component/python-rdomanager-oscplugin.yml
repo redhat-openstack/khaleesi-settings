@@ -1,0 +1,5 @@
+component:
+  name: python-rdomanager-oscplugin
+  short_name: rdo-oscplugin
+  dir: !join [ !env PWD, /../python-rdomanager-oscplugin]
+

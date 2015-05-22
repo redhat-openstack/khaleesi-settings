@@ -1,0 +1,5 @@
+workaround:
+    mysql_centos7: false
+    iptables_install: false
+    centos7_release: false
+    messagebus_centos7: false

@@ -1,0 +1,34 @@
+--- !extends:common/shared.yml
+
+nodes:
+  controller:
+    storage_volume:
+      variant:
+        share: !lookup provisioner.storage.shares.gluster
+        shares_file: "/etc/cinder/gluster.share"
+
+      config:
+        cinder:
+          "4.0":
+            default:
+              volume_driver: "cinder.volume.drivers.glusterfs.GlusterfsDriver"
+              glusterfs_shares_config: "/etc/cinder/gluster.shares"
+          "5.0":
+            default:
+              volume_driver: "cinder.volume.drivers.glusterfs.GlusterfsDriver"
+              glusterfs_shares_config: "/etc/cinder/gluster.shares"
+          "6.0":
+            default:
+              enabled_backends: "rhos-6-gluster"
+            rhos-6-gluster:
+              volume_driver: "cinder.volume.drivers.glusterfs.GlusterfsDriver"
+              glusterfs_shares_config: "/etc/cinder/gluster.shares"
+
+tempest:
+  additional_default_settings:
+    - section: volume
+      option: storage_protocol
+      value: glusterfs
+    - section: volume
+      option: vendor_name
+      value: '"Open Source"'

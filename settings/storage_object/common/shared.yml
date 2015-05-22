@@ -1,0 +1,14 @@
+---
+
+nodes:
+  tester:
+    groups:
+      - storage_object
+  controller:
+    groups:
+      - storage_object
+    storage_object:
+      plugin:
+        name: object
+      variant:
+        short_name: obj

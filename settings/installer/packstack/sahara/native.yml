@@ -1,0 +1,6 @@
+--- !extends:common/shared.yml
+
+packstack:
+    config:
+        CONFIG_SAHARA_INSTALL: y
+

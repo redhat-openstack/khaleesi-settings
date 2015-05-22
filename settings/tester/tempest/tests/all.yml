@@ -1,0 +1,5 @@
+tempest:
+    test_name: all
+    skip:
+        files:
+        tests:

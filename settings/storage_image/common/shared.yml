@@ -1,0 +1,14 @@
+---
+
+nodes:
+  tester:
+    groups:
+      - storage_image
+  controller:
+    groups:
+      - storage_image
+    storage_image:
+      plugin:
+        name: image
+      variant:
+        short_name: img

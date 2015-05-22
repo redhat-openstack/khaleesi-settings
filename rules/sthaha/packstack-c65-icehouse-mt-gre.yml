@@ -1,0 +1,9 @@
+--- !extends:common/packstack-icehouse.yml
+
+args:
+    distro: &distro centos-6.5
+    installer-distro: *distro
+    installer-topology: multinode
+    installer-network-variant: gre
+    extra-vars:
+        - tmp.node_prefix=st-jkn-c65-ih-mt-gre-

@@ -1,0 +1,8 @@
+--- !extends:common/packstack-icehouse.yml
+
+args:
+    distro: &distro centos-6.5
+    installer-distro: *distro
+    installer-topology: aio
+    extra-vars:
+        - tmp.node_prefix=st-jkn-c65-ih-aio-

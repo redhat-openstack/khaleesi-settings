@@ -1,0 +1,23 @@
+--- !extends:common/image.yml
+
+provisioner:
+    tenant_name: gcerami
+    key_file: gcerami-oslab.pem
+    key_name: oslab-gcerami-key
+    network:
+        nic:
+            net_1:
+                name: openstack-deploy-public
+                id: 1f3a40a5-b99c-40c9-9d04-c2e4d159ae4e
+            net_2:
+                name: openstack-deploy-private
+                id: 867fb8a5-19f8-4644-9ca6-6fd5eb3aaf42 
+            net_3:
+                name: openstack-deploy-external
+                id: b29ef16f-c5d7-438e-8f1c-7e33d69c7457
+        subnets_netmask: 255.255.0.0
+        public_subnet_cidr: 172.17.0.0/24
+        public_allocation_start: 172.17.0.200
+        public_allocation_end: 172.17.0.220
+        public_subnet_gateway: 172.17.0.1
+

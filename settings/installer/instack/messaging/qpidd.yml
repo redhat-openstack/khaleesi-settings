@@ -1,0 +1,4 @@
+installer:
+    messaging:
+        variant:
+            short_name: qpd

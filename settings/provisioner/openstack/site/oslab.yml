@@ -1,0 +1,13 @@
+provisioner:
+    url: 'http://controller.oslab.openstack.engineering.REPLACE_ME:5000/v2.0'
+    network:
+        name: external
+        type: neutron
+    flavor:
+        tiny:  1
+        small: 2
+        medium: 3
+        large: 3
+        medlarge: 4
+        xlarge: 9
+

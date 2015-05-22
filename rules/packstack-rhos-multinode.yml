@@ -1,0 +1,3 @@
+--- !extends:packstack-rhos.yml
+args:
+    installer-topology: multinode_two_nic

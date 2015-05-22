@@ -1,0 +1,4 @@
+installer:
+  updated_rpms_list:
+      - 'https://kojipkgs.fedoraproject.org//packages/openstack-tuskar-ui/0.2.0/5.fc22/noarch/openstack-tuskar-ui-0.2.0-5.fc22.noarch.rpm'
+

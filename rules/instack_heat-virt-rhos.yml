@@ -1,0 +1,3 @@
+--- !extends:instack-virt-rhos.yml
+args:
+    job: instack_heat

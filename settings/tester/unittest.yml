@@ -1,0 +1,7 @@
+test:
+    type:
+        name: unit-test
+        short_name: ut
+    env_name: rpm       # default test config to run from components
+                        # jenkins-config.yml
+

@@ -1,0 +1,16 @@
+--- !extends:common/all.yml
+
+use_astapor: yes
+astapor_repo: https://github.com/gabrielecerami/astapor.git
+astapor_branch: glance-rabbitmq-missing-parameters
+# astapor_dest: /root/astapor
+use_opm_src: no
+opm_repo: https://github.com/redhat-openstack/openstack-puppet-modules.git
+opm_branch: master
+workaround_glance_table_utf8: no
+workaround_vif_plugging: no
+workaround_nova_compute_fix: no
+workaround_puppet_version_lock: no
+workaround_openstack_packstack_rpm: no
+workaround_neutron_ovs_udev_loop: yes
+openstack_packstack_rpm: http://REPLACE_ME/brewroot/packages/openstack-puppet-modules/2013.2/9.el6ost/noarch/openstack-puppet-modules-2013.2-9.el6ost.noarch.rpm

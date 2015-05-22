@@ -1,0 +1,110 @@
+--- !extends:common/nodes.yml
+
+foreman:
+    hostgroups:
+      - name: "quickstack::nova_network::compute"
+        params:
+          - { key: auth_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: glance_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: nova_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: network_floating_range, value: "{{ public_subnet_cidr }}", type: "string" }
+      - name: "quickstack::neutron::compute"
+        params:
+          - { key: ovs_tunnel_iface, value: "eth1", type: "string" }
+          - { key: ovs_tunnel_types, value: "{{ ovs_tunnel_types }}", type: "array" }
+          - { key: auth_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: glance_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: neutron_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+          - { key: nova_host, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string" }
+      - name: "quickstack::neutron::networker"
+        params:
+          - { key: ovs_tunnel_iface, value: "eth1", type: "string" }
+          - { key: ovs_tunnel_types, value: "{{ ovs_tunnel_types }}", type: "array" }
+      - name: "quickstack::pacemaker::common"
+        params:
+          - { key: pacemaker_cluster_members, value: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}", type: "string"}
+      - name: "quickstack::pacemaker::keystone"
+        params:
+          - { key: admin_token, value: "redhat", type: "string" }
+      - name: "quickstack::pacemaker::horizon"
+        params:
+          - { key: secret_key, value: "redhat", type: "string" }
+      - name: "quickstack::pacemaker::neutron"
+        params:
+          - { key: ovs_tunnel_iface, value: "eth1", type: "string" }
+          - { key: ovs_tunnel_types, value: "{{ ovs_tunnel_types }}", type: "array" }
+      - name: "quickstack::pacemaker::glance"
+        params:
+          - { key: pcmk_fs_device, value: "REPLACE_ME:/glance", type: "string" }
+      - name: "quickstack::pacemaker::mysql"
+        params:
+          - { key: storage_device, value: "REPLACE_ME:/mysql", type: "string" }
+          - { key: storage_type, value: "nfs", type: "string" }
+      - name: "quickstack::pacemaker::params"
+        params:
+          - { key: cinder_admin_vip, value: "172.16.18.85", type: "string" }
+          - { key: cinder_private_vip, value: "172.16.18.84", type: "string" }
+          - { key: cinder_public_vip, value: "172.16.18.83", type: "string" }
+          - { key: db_vip, value: "{{ hostvars[controller_name].ansible_default_ipv4.address }}", type: "string" }
+          - { key: glance_admin_vip, value: "172.16.18.25", type: "string" }
+          - { key: glance_private_vip, value: "172.16.18.24", type: "string" }
+          - { key: glance_public_vip, value: "172.16.18.23", type: "string" }
+          - { key: heat_admin_vip, value: "172.16.18.115", type: "string" }
+          - { key: heat_cfn_enabled, value: 'true', type: "string" }
+          - { key: heat_cfn_group, value: heat_cfn, type: "string" }
+          - { key: heat_cfn_private_vip, value: "172.16.18.124", type: "string" }
+          - { key: heat_cfn_public_vip, value: "172.16.18.123", type: "string" }
+          - { key: heat_cfn_user_password, value: "redhat", type: "string" }
+          - { key: heat_cloudwatch_enabled, value: 'true', type: "string" }
+          - { key: heat_db_password, value: "heatdbpw", type: "string" }
+          - { key: heat_group, value: heat, type: "string" }
+          - { key: heat_private_vip, value: "172.16.18.114", type: "string" }
+          - { key: heat_public_vip, value: "172.16.18.113", type: "string" }
+          - { key: heat_user_password, value: "redhat", type: "string" }
+          - { key: horizon_admin_vip, value: "172.16.18.95", type: "string" }
+          - { key: horizon_group, value: horizon, type: "string" }
+          - { key: horizon_private_vip, value: "172.16.18.94", type: "string" }
+          - { key: horizon_public_vip, value: "172.16.18.93", type: "string" }
+          - { key: include_cinder, value: 'false', type: "string" }
+          - { key: include_glance, value: 'true', type: "string" }
+          - { key: include_heat, value: 'false', type: "string" }
+          - { key: include_horizon, value: 'false', type: "string" }
+          - { key: include_keystone, value: 'true', type: "string" }
+          - { key: include_mysql, value: 'true', type: "string" }
+          - { key: include_neutron, value: 'true', type: "string" }
+          - { key: include_nova, value: 'true', type: "string" }
+          - { key: include_qpid, value: 'true', type: "string" }
+          - { key: include_swift, value: 'true', type: "string" }
+          - { key: keystone_admin_vip, value: "172.16.18.35", type: "string" }
+          - { key: keystone_db_password, value: "keystonedbpw", type: "string" }
+          - { key: keystone_group, value: keystone, type: "string" }
+          - { key: keystone_private_vip, value: "172.16.18.34", type: "string" }
+          - { key: keystone_public_vip, value: "172.16.18.33", type: "string" }
+          - { key: keystone_user_password, value: "redhat", type: "string" }
+          - { key: lb_backend_server_addrs, value: "['172.16.17.10', '172.16.17.20', '172.16.17.30']", type: "array" }
+          - { key: lb_backend_server_names, value: "['c1a1', 'c1a2', 'c1a3']", type: "array" }
+          - { key: loadbalancer_vip, value: "172.16.18.53", type: "string" }
+          - { key: loadbalancer_group, value: loadbalancer, type: "string" }
+          - { key: neutron, value: 'true', type: "string" }
+          - { key: neutron_admin_vip, value: "172.16.18.105", type: "string" }
+          - { key: neutron_db_password, value: "neutrondbpw", type: "string" }
+          - { key: neutron_group, value: neutron, type: "string" }
+          - { key: neutron_metadata_proxy_secret, value: "redhat", type: "string" }
+          - { key: neutron_private_vip, value: "172.16.18.104", type: "string" }
+          - { key: neutron_public_vip, value: "172.16.18.103", type: "string" }
+          - { key: neutron_user_password, value: "redhat", type: "string" }
+          - { key: nova_admin_vip, value: "172.16.18.65", type: "string" }
+          - { key: nova_db_password, value: "novadbpw", type: "string" }
+          - { key: nova_group, value: nova, type: "string" }
+          - { key: nova_private_vip, value: "172.16.18.64", type: "string" }
+          - { key: nova_public_vip, value: "172.16.18.63", type: "string" }
+          - { key: nova_user_password, value: "redhat", type: "string" }
+          - { key: private_iface, value: eth1, type: "string" }
+          - { key: private_ip, value: '{{ hostvars[controller_name].ansible_eth1.ipv4.address }}', type: "string" }
+          - { key: private_network, value: '', type: "string" }
+          - { key: qpid_group, value: qpid, type: "string" }
+          - { key: qpid_port, value: '5672', type: "string" }
+          - { key: qpid_vip, value: "172.16.18.13", type: "string" }
+          - { key: swift_group, value: swift, type: "string" }
+          - { key: swift_public_vip, value: "172.16.18.73", type: "string" }
+          - { key: swift_user_password, value: "redhat", type: "string" }

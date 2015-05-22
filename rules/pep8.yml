@@ -1,0 +1,11 @@
+args:
+    tester: pep8
+    job: unittest
+    provisioner: openstack
+    provisioner-site: qeos
+    provisioner-site-user: rhos-jenkins
+    etherpad: production
+
+must_have:
+    - distro
+    - tester-component

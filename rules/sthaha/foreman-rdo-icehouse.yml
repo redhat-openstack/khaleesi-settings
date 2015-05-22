@@ -1,0 +1,21 @@
+---
+args:
+  installer: foreman
+  installer-topology: default
+  installer-network: neutron
+  installer-network-variant: gre
+  product: rdo
+  product-version: icehouse
+  product-version-repo: production
+  tester: tempest
+  tester-setup: rpm
+  tester-tests: minimal
+  job: foreman-rdo
+  provisioner: openstack
+  provisioner-site: qeos
+  provisioner-site-user: REPLACE_ME
+  distro: rhel-6.5
+  extra-vars:
+    - tmp.node_prefix=st-jkn-fore-rh65-rdo-gre-
+
+

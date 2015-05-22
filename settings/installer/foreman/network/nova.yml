@@ -1,0 +1,14 @@
+installer:
+    network:
+        plugin:
+            name: nova
+        variant:
+            short_name: flat
+        auto_assign_floating_ip: true
+
+foreman:
+    hostgroups:
+      - name: "quickstack::nova_network::compute"
+        params:
+          - { key: auto_assign_floating_ip, value: "{{ installer.network.auto_assign_floating_ip | lower }}", type: "string" }
+

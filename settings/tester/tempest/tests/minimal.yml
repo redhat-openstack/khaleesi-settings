@@ -1,0 +1,8 @@
+tempest:
+    test_name: tempest.scenario.test_server_basic_ops
+    skip:
+        files:
+            - test_server_rescue
+        tests:
+            - test_rescue_unrescue_instance
+

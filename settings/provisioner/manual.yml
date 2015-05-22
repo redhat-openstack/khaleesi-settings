@@ -1,0 +1,37 @@
+---
+provisioner:
+    type: manual
+    key_file: westest.pem
+
+    image:
+        rhel:
+            '6.5':
+                id:
+                remote_user: cloud-user
+            '7.0':
+                id:
+                remote_user: cloud-user
+        centos:
+            '6.5':
+                id:
+                remote_user: cloud-user
+        fedora:
+            '20':
+                id:
+                remote_user: fedora
+
+    network:
+        type: none
+        nic:
+            net_1:
+                id:
+                name: eth0
+            net_2:
+                id:
+                name: eth1
+
+    flavor:
+        tiny:
+        small:
+        medium:
+        large:

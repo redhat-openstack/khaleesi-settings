@@ -1,0 +1,50 @@
+--- !extends:../../common/aio.yml
+
+nodes:
+    controller: &controller
+        name: '{{ tmp.node_prefix }}controller'
+        hostname: '{{ tmp.node_prefix }}controller'
+        image_id: '{{ provisioner.image[distro.name][distro.version].id }}'
+        remote_user: !lookup provisioner.image[distro.name][distro.version].remote_user
+        flavor_id: !lookup provisioner.flavor.large
+        nics:
+            - net-id: !lookup provisioner.network.nic.net_1.id
+            - net-id: !lookup provisioner.network.nic.net_2.id
+            - net-id: !lookup provisioner.network.nic.net_3.id
+
+        net_interfaces:
+            - { interface: 'eth1',
+                network_name: !lookup provisioner.network.nic.net_2.name }
+        bridge_interfaces:
+            - { name: br-ex, interface: eth2,
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        groups:
+            - controller
+            - compute
+            - networker
+            - openstack_nodes
+            - !lookup installer.name
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+
+    tester:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}tester'
+        hostname: 'tester.example.com'
+        image_id: !lookup provisioner.image.fedora.21.id
+        remote_user: !lookup provisioner.image.fedora.21.remote_user
+        flavor_id: !lookup provisioner.flavor.small
+        groups:
+            - tester
+            - openstack_nodes
+
+packstack:
+    config:
+        CONFIG_PROVISION_ALL_IN_ONE_OVS_BRIDGE: n
+        CONFIG_NOVA_COMPUTE_PRIVIF: eth0
+        CONFIG_NOVA_NETWORK_PRIVIF: eth0
+        CONFIG_NOVA_NETWORK_FIXEDRANGE: 192.168.32.0/24
+        CONFIG_NOVA_NETWORK_FLOATRANGE: 10.3.4.0/24
+
+
+

@@ -1,0 +1,11 @@
+tmp:
+    anchors:
+    - &repo_url http://209.132.178.33/repos/
+
+product:
+    short_repo: dln
+    repo_type: delorean
+    repo:
+        delorean:
+            Fedora:
+                '20': !join [*repo_url, current]

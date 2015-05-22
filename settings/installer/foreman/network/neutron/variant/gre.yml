@@ -1,0 +1,6 @@
+installer:
+    network:
+        variant:
+            short_name: gre
+network:
+    ovs_tunnel_types: "['gre']"

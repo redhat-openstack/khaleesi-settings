@@ -1,0 +1,17 @@
+args:
+    tester: tempest
+    tester-setup: rpm
+    tester-tests: minimal
+    provisioner: openstack
+    provisioner-site: qeos
+    installer-topology: aio
+    product: rdo
+    installer: packstack
+    job: packstack
+validation:
+    must_have:
+        - product-version
+        - distro
+        - installer-network
+        - installer-network-variant
+        - provisioner-site-user

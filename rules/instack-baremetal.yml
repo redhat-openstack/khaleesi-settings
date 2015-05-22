@@ -1,0 +1,7 @@
+--- !extends:instack-default.yml
+args:
+     installer-topology: nodes
+     job: instack-baremetal
+
+
+

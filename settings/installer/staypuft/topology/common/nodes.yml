@@ -1,0 +1,87 @@
+--- !extends:../../../common/multinode.yml
+
+
+foreman:
+    fqdn: "{{ tmp.node_prefix }}foreman.example.com"
+
+nodes:
+    controller: &controller
+        name: '{{ tmp.node_prefix }}controller'
+        hostname: '{{ tmp.node_prefix }}controller.example.com'
+        image_id: '{{ provisioner.image[distro.name][distro.version].id }}'
+        remote_user: !lookup provisioner.image[distro.name][distro.version].remote_user
+        flavor_id: !lookup provisioner.flavor.large
+        nics:
+            - net-id: !lookup provisioner.network.nic.net_1.id
+            - net-id: !lookup provisioner.network.nic.net_2.id
+            - net-id: !lookup provisioner.network.nic.net_3.id
+
+        net_interfaces:
+            - { interface: 'eth1',
+                network_name: !lookup provisioner.network.nic.net_2.name }
+            - { interface: 'eth2',
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        groups:
+            - controller
+            - openstack_nodes
+            - foreman_node
+            - foreman_installer
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: 'Controller (Neutron)'
+
+    compute-1:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}compute-1'
+        hostname: '{{ tmp.node_prefix }}compute-1.example.com'
+        groups:
+            - compute
+            - foreman_node
+            - foreman_installer
+            - openstack_nodes
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: "Compute (Neutron)"
+
+
+    networker:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}networker'
+        hostname: '{{ tmp.node_prefix }}networker.example.com'
+        groups:
+            - networker
+            - foreman_node
+            - foreman_installer
+            - openstack_nodes
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: "Neutron Networker"
+        bridge_interfaces:
+            - { name: br-ex, interface: eth2,
+                network_name: !lookup provisioner.network.nic.net_3.name }
+
+    foreman:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}foreman'
+        hostname: '{{ tmp.node_prefix }}foreman.example.com'
+        image_id: "{{ provisioner.image['rhel']['6.5'].id }}"
+        groups:
+            - foreman
+            - openstack_nodes
+            - foreman_installer
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: None
+
+
+    tempest:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}tempest'
+        hostname: '{{ tmp.node_prefix }}tempest.example.com'
+        image_id: !lookup provisioner.image.fedora.21.id
+        remote_user: !lookup provisioner.image.fedora.21.remote_user
+        flavor_id: !lookup provisioner.flavor.small
+        groups:
+            - tempest
+            - openstack_nodes
+        node_hostgroup: None

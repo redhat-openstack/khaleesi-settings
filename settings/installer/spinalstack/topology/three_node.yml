@@ -1,0 +1,77 @@
+--- !extends:../../common/node_prefix.yml
+
+nodes:
+    installer: &installer
+        name: '{{ tmp.node_prefix }}install-server'
+        hostname: '{{ installer.name }}.example.com'
+        image_id: '{{ provisioner.image[distro.name][distro.version].id }}'
+        remote_user: !lookup provisioner.image[distro.name][distro.version].remote_user
+        flavor_id: !lookup provisioner.flavor.large
+        nics:
+            - net-id: !lookup provisioner.network.nic.net_1.id
+            - net-id: !lookup provisioner.network.nic.net_2.id
+            - net-id: !lookup provisioner.network.nic.net_3.id
+
+        net_interfaces:
+            - { interface: 'eth1',
+                network_name: !lookup provisioner.network.nic.net_2.name }
+            - { interface: 'eth2',
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        bridge_interfaces:
+            - { name: br-ex, interface: eth2,
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        groups:
+            - installer
+            - openstack_nodes
+            - !lookup installer.name
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+
+    openstack1:
+        <<: *installer
+        name: '{{ tmp.node_prefix }}openstack1'
+        hostname: 'openstack1.example.com'
+        groups:
+            - openstack1
+            - openstack_nodes
+            - !lookup installer.name
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+
+    openstack2:
+        <<: *installer
+        name: '{{ tmp.node_prefix }}openstack2'
+        hostname: 'compute-2.example.com'
+        groups:
+            - opnestack2
+            - openstack_nodes
+            - !lookup installer.name
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+
+    openstack3:
+        <<: *installer
+        name: '{{ tmp.node_prefix }}openstack3'
+        hostname: 'openstack3.example.com'
+        groups:
+            - openstack3
+            - openstack_nodes
+            - !lookup installer.name
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+
+    tempest:
+        <<: *installer
+        name: '{{ tmp.node_prefix }}tempest'
+        hostname: 'tempest.example.com'
+        image_id: !lookup provisioner.image.fedora.21.id
+        remote_user: !lookup provisioner.image.fedora.21.remote_user
+        flavor_id: !lookup provisioner.flavor.small
+        net_interfaces:
+            - { interface: 'eth1',
+                network_name: !lookup provisioner.network.nic.net_2.name }
+            - { interface: 'eth2',
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        groups:
+            - tempest
+            - openstack_nodes

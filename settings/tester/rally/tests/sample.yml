@@ -1,0 +1,4 @@
+# duplicate this file with paths to preset rally scenario files
+
+rally:
+  local_taskfile: /replace/with/path/to/rally/secnario.json

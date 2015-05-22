@@ -1,0 +1,51 @@
+--- !extends:common/shared.yml
+
+nodes:
+  controller:
+    storage_volume:
+      config:
+        cinder:
+          "4.0":
+            DEFAULT:
+              san_ip: "10.35.160.102"
+              san_login: "sysadmin"
+              san_password: "sysadmin"
+              volume_driver: "cinder.volume.drivers.emc.emc_cli_iscsi.EMCCLIISCSIDriver"
+              iscsi_ip_address: "10.35.160.104"
+              storage_vnx_pool_name: "rhevm"
+              naviseccli_path: "/opt/Navisphere/bin/naviseccli"
+              max_luns_per_storage_group: "256"
+              default_timeout: "10"
+          "5.0":
+            DEFAULT:
+              san_ip: "10.35.160.102"
+              san_login: "sysadmin"
+              san_password: "sysadmin"
+              volume_driver: "cinder.volume.drivers.emc.emc_cli_iscsi.EMCCLIISCSIDriver"
+              iscsi_ip_address: "10.35.160.104"
+              storage_vnx_pool_name: "rhevm"
+              naviseccli_path: "/opt/Navisphere/bin/naviseccli"
+              max_luns_per_storage_group: "256"
+              default_timeout: "10"
+          "6.0":
+            DEFAULT:
+              enabled_backends: "rhos-6-emc_vnx_direct_iscsi"
+            rhos-6-emc_vnx_direct_iscsi:
+              san_ip: "10.35.160.102"
+              san_login: "sysadmin"
+              san_password: "sysadmin"
+              volume_driver: "cinder.volume.drivers.emc.emc_cli_iscsi.EMCCLIISCSIDriver"
+              iscsi_ip_address: "10.35.160.104"
+              storage_vnx_pool_name: "rhevm"
+              naviseccli_path: "/opt/Navisphere/bin/naviseccli"
+              max_luns_per_storage_group: "256"
+              default_timeout: "10"
+
+tempest:
+  additional_default_settings:
+    - section: volume
+      option: storage_protocol
+      value: iSCSI
+    - section: volume
+      option: vendor_name
+      value: "EMC"

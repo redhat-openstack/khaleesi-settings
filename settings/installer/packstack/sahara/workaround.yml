@@ -1,0 +1,10 @@
+--- !extends:common/shared.yml
+
+nodes:
+    controller:
+        groups:
+            - sahara
+
+    tester:
+        groups:
+            - sahara

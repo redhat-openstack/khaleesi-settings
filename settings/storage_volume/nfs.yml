@@ -1,0 +1,34 @@
+--- !extends:common/shared.yml
+
+nodes:
+  controller:
+    storage_volume:
+      variant:
+        share: !lookup provisioner.storage.shares.nfs
+        shares_file: "/etc/cinder/nfs.share"
+
+      config:
+        cinder:
+          "4.0":
+            DEFAULT:
+              volume_driver: "cinder.volume.drivers.nfs.NfsDriver"
+              nfs_shares_config: "/etc/cinder/nfs.shares"
+          "5.0":
+            DEFAULT:
+              volume_driver: "cinder.volume.drivers.nfs.NfsDriver"
+              nfs_shares_config: "/etc/cinder/nfs.share"
+          "6.0":
+            DEFAULT:
+              enabled_backends: "rhos-6-nfs"
+            rhos-6-nfs:
+              volume_driver: "cinder.volume.drivers.nfs.NfsDriver"
+              nfs_shares_config: "/etc/cinder/nfs.shares"
+
+tempest:
+  additional_default_settings:
+    - section: volume
+      option: storage_protocol
+      value: nfs
+    - section: volume
+      option: vendor_name
+      value: '"Open Source"'

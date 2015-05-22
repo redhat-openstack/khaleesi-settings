@@ -1,0 +1,4 @@
+--- !extends:common/all.yml
+
+job:
+    workaround_m2crypto: yes

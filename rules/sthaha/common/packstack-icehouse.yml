@@ -1,0 +1,15 @@
+args:
+    distro: &distro rhel-7.0
+    provisioner: openstack
+    provisioner-site: qeos
+    provisioner-site-user: REPLACE_ME
+    installer: packstack
+    installer-distro: *distro
+    installer-network: neutron
+    product: rdo
+    product-version: icehouse
+    product-version-repo: production
+    tester: tempest
+    tester-setup: rpm
+    tester-tests: minimal
+    job: packstack

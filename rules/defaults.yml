@@ -1,0 +1,10 @@
+---
+validation:
+    must_have:
+        - product-version
+        - distro
+        - installer-network
+        - installer-network-variant
+        - tester
+        - tester-setup
+        - tester-tests

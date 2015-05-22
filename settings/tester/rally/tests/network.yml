@@ -1,0 +1,2 @@
+rally:
+  local_taskfile: khaleesi-settings/settings/tester/rally/tasks/rhos-qe-network.json

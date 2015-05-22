@@ -1,0 +1,21 @@
+---
+args:
+    installer: foreman
+    installer-topology: default
+    installer-network: neutron
+    installer-network-variant: gre
+    product: rhos
+    product-version: 5.0
+    product-version-repo: puddle
+    tester: tempest
+    tester-setup: rpm
+    job: foreman-puddle
+    extra-vars:
+         - provisioner.password=CHANGEME
+
+validation:
+    must_have:
+        - distro
+        - provisioner
+        - provisioner-site
+        - provisioner-site-user

@@ -1,0 +1,7 @@
+--- !extends:instack-virt.yml
+
+job:
+    archive:
+        - /home/stack/WordPress_software-config_2-instances.yaml
+    internal_nameserver_ip_address: 8.8.8.8
+    rh_download_server: 10.10.160.20

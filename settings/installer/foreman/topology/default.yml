@@ -1,0 +1,47 @@
+--- !extends:common/nodes.yml
+
+foreman:
+    hostgroups:
+    - name: "quickstack::neutron::controller"
+      params:
+        - key: "ml2_tenant_network_types"
+          type: "array"
+          value:
+            - "gre"
+    - name: "quickstack::neutron::compute"
+      params:
+        - key: "ovs_tunnel_iface"
+          type: "string"
+          value: "eth1"
+        - key: "ovs_tunnel_types"
+          type: "array"
+          value:
+            - "gre"
+        - key: "tenant_network_type"
+          type: "string"
+          value: "gre"
+        - key: "auth_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "glance_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "neutron_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+        - key: "nova_host"
+          type: "string"
+          value: "{{hostvars[controller_name].ansible_eth1.ipv4.address}}"
+    - name: "quickstack::neutron::networker"
+      params:
+        - key: "ovs_tunnel_iface"
+          type: "string"
+          value: "eth1"
+        - key: "ovs_tunnel_types"
+          type: "array"
+          value:
+            - "gre"
+        - key: "tenant_network_type"
+          type: "string"
+          value: "gre"
+

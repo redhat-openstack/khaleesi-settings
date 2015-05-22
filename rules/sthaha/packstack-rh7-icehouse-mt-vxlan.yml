@@ -1,0 +1,7 @@
+--- !extends:common/packstack-icehouse.yml
+
+args:
+    installer-topology: multinode
+    installer-network-variant: vxlan
+    extra-vars:
+        - tmp.node_prefix=st-jkn-rh7-ih-mt-vxl-

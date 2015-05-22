@@ -1,0 +1,5 @@
+--- !extends:instack-virt.yml
+args:
+    installer-custom: config
+
+

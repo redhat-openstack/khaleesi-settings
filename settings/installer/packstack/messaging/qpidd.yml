@@ -1,0 +1,9 @@
+installer:
+    messaging:
+        variant:
+            short_name: qpd
+
+
+packstack:
+    config:
+        CONFIG_AMQP_BACKEND: "qpid"

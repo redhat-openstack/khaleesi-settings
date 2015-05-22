@@ -1,0 +1,21 @@
+---
+args:
+    installer: foreman
+    installer-topology: default
+    installer-network: neutron
+    installer-network-variant: gre
+    product: rdo
+    product-version: icehouse
+    product-version-repo: production
+    tester: tempest
+    tester-setup: rpm
+    job: foreman-rdo
+    extra-vars:
+         - provisioner.password=CHANGEME
+
+validation:
+    must_have:
+        - distro
+        - provisioner
+        - provisioner-site
+        - provisioner-site-user

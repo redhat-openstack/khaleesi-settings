@@ -1,0 +1,4 @@
+--- !extends:instack-virt.yml
+args:
+    product: rhos
+    provisioner-distro: rhel

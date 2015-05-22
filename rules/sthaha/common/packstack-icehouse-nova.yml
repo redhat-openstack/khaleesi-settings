@@ -1,0 +1,4 @@
+--- !extends:packstack-icehouse.yml
+
+args:
+    installer-network: nova

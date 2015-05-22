@@ -1,0 +1,6 @@
+tempest:
+    test_name: smoke
+    skip:
+        files:
+        tests:
+

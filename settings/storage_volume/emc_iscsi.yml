@@ -1,0 +1,41 @@
+--- !extends:common/shared.yml
+
+nodes:
+  controller:
+    storage_volume:
+      config:
+        cinder:
+          "4.0":
+              DEFAULT:
+                iscsi_ip_address: "10.35.160.106"
+                iscsi_target_prefix: "iqn.1992-04.com.emc"
+                volume_driver: "cinder.volume.drivers.emc.emc_smis_iscsi.EMCSMISISCSIDriver"
+                cinder_emc_config_file: "/etc/cinder/emc_iscsi.xml"
+          "5.0":
+            DEFAULT:
+              iscsi_ip_address: "10.35.160.106"
+              iscsi_target_prefix: "iqn.1992-04.com.emc"
+              volume_driver: "cinder.volume.drivers.emc.emc_smis_iscsi.EMCSMISISCSIDriver"
+              cinder_emc_config_file: "/etc/cinder/emc_iscsi.xml"
+          "6.0":
+            DEFAULT:
+              enabled_backends: "rhos-6-emc_iscsi"
+            rhos-6-emc_iscsi:
+              iscsi_ip_address: "10.35.160.106"
+              iscsi_target_prefix: "iqn.1992-04.com.emc"
+              volume_driver: "cinder.volume.drivers.emc.emc_smis_iscsi.EMCSMISISCSIDriver"
+              cinder_emc_config_file: "/etc/cinder/emc_iscsi.xml"
+          emc:
+            ecomserverip: 10.35.64.106
+            ecomserverport: 5985
+            ecomusername: admin
+            ecompassword: "#1Password"
+
+tempest:
+  additional_default_settings:
+    - section: volume
+      option: storage_protocol
+      value: iSCSI
+    - section: volume
+      option: vendor_name
+      value: "EMC"

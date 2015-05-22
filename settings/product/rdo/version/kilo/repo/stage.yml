@@ -1,0 +1,24 @@
+tmp:
+    anchors:
+    - &repo_url https://repos.fedorapeople.org/repos/openstack/openstack-kilo/testing/
+    - &fedora_repo_url https://repos.fedorapeople.org/repos/openstack/openstack-kilo/
+
+product:
+    short_repo: sta
+    repo_type: stage
+    repo:
+        stage:
+            CentOS:
+                '7.0': !join [*repo_url, el7]
+                '7.0.1406': !join [*repo_url, el7]
+                '7.1.1503': !join [*repo_url, el7]
+            RedHat:
+                '7.0': !join [*repo_url, el7]
+                '7.1': !join [*repo_url, el7]
+            Fedora:
+                '20': !join [*fedora_repo_url, fedora-22]
+                '21': !join [*fedora_repo_url, fedora-22]
+
+packstack:
+    config:
+        CONFIG_LBAAS_INSTALL: n

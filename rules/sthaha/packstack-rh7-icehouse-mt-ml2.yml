@@ -1,0 +1,7 @@
+--- !extends:common/packstack-icehouse.yml
+
+args:
+    installer-topology: multinode
+    installer-network-variant: ml2
+    extra-vars:
+        - tmp.node_prefix=st-jkn-rh7-ih-mt-ml2-

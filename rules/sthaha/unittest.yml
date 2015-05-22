@@ -1,0 +1,12 @@
+args:
+  tester: unittest
+  job: unittest
+  #provisioner: manual
+  provisioner: openstack
+  provisioner-site: qeos
+  provisioner-site-user: REPLACE_ME
+
+must_have:
+    - distro
+    - tester-component
+

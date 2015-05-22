@@ -1,0 +1,4 @@
+workaround:
+    quickstack_cinder: true
+    reseller_admin_role: true
+    mongodb: false

@@ -1,0 +1,6 @@
+--- !extends:../tenant/gcerami.yml
+
+provisioner:
+    username: gcerami
+    password: CHANGEME
+

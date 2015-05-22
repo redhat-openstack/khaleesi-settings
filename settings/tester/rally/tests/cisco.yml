@@ -1,0 +1,4 @@
+# duplicate this file with paths to preset rally scenario files
+
+rally:
+  local_taskfile: khaleesi-settings/settings/tester/rally/tasks/cisco-sanity.json

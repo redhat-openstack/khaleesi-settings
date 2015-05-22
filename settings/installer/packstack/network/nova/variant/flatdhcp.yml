@@ -1,0 +1,9 @@
+installer:
+    network:
+        variant:
+            short_name: flat
+
+packstack:
+    config:
+        CONFIG_NOVA_NETWORK_MANAGER: 'nova.network.manager.FlatDHCPManager'
+        CONFIG_NOVA_NETWORK_PUBIF: 'eth0'

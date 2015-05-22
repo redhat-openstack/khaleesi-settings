@@ -1,0 +1,3 @@
+--- !extends:defaults.yml
+args:
+    installer: foreman

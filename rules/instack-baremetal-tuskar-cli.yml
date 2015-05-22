@@ -1,0 +1,4 @@
+--- !extends:instack-baremetal.yml
+args:
+     installer-deployment: tuskar_cli
+

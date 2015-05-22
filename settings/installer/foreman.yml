@@ -1,0 +1,50 @@
+installer:
+    name: foreman
+    short_name: frm
+
+### TODO: find a better place to put this
+###  -- Only applied for RDO
+repos_to_remove:
+    - rdo-release.repo
+
+
+foreman:
+    seed_values:
+        - { name: 'neutron', oldvalue: 'false', newvalue: 'true' }
+        - { name: 'use_qemu_for_poc', oldvalue: 'false', newvalue: 'true' }
+        - { name: 'swift_ring_server', oldvalue: '192.168.203.1', newvalue: '{{ controller_priv_ip }}' }
+        - { name: 'swift_local_interface', oldvalue: 'eth3', newvalue: 'eth1' }
+        - { name: 'controller_priv_host', oldvalue: '172.16.0.1', newvalue: '{{ controller_priv_ip }}' }
+        - { name: 'controller_pub_host', oldvalue: '172.16.1.1', newvalue: '{{ controller_pub_ip }}' }
+        - { name: 'controller_admin_host', oldvalue: '172.16.0.1', newvalue: '{{ controller_priv_ip }}'}
+        - { name: 'mysql_host', oldvalue: '172.16.0.1', newvalue: '{{ controller_priv_ip }}' }
+        - { name: 'qpid_host', oldvalue: '172.16.0.1', newvalue: '{{ controller_priv_ip }}' }
+        - { name: 'amqp_host', oldvalue: '172.16.0.1', newvalue: '{{ controller_priv_ip }}' }
+
+use_astapor: '{{ product.version == "icehouse"  }}'
+
+# DICT draft
+#
+#    seed_values:
+#        'neutron':
+#            oldvalue: 'false'
+#            newvalue: 'true'
+#    hostgroups:
+#        "quickstack::nova_network::compute":
+#            string_parameters:
+#                auth_host: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}"
+
+job:
+    archive:
+        - /root/
+        - /var/log/
+        - /etc/nova
+        - /etc/ceilometer
+        - /etc/cinder
+        - /etc/glance
+        - /etc/keystone
+        - /etc/neutron
+        - /etc/ntp
+        - /etc/puppet
+        - /etc/qpid
+        - /etc/qpidd.conf

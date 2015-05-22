@@ -1,0 +1,5 @@
+ss_installer:
+  rpms:
+    - git
+    - python-jinja2
+    - rubygem-bundler

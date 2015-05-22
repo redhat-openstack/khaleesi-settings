@@ -1,0 +1,17 @@
+---
+args:
+    installer: staypuft
+    installer-topology: baremetal
+    installer-network: neutron
+    installer-network-variant: gre
+    product: rhos
+    product-version: 5.0
+    product-version-repo: puddle
+    tester: tempest
+    tester-setup: rpm
+    job: staypuft
+    provisioner: none
+
+validation:
+    must_have:
+        - distro
