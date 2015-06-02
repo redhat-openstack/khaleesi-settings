@@ -1,0 +1,9 @@
+installer:
+    env:
+        type: baremetal
+        model: dell_pe_r630
+        answers_local_interface: em2
+        neutron_public_interface: nic1
+        network: '10.8.147'
+        network_cidr: 172.21.0.0/16
+        network_gateway: 10.8.147.254

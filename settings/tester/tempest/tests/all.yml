@@ -1,0 +1,6 @@
+tester:
+    tempest:
+        test: all
+        skip:
+            files:
+            tests:

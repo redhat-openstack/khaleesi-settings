@@ -1,0 +1,26 @@
+tmp:
+    anchors:
+    - &repo_url http://rdo-stage.REPLACE_ME/openstack/openstack-juno/
+
+product:
+    short_repo: sta
+    repo_type: stage
+    repo:
+        stage:
+            CentOS:
+                '6.5': !join [*repo_url, epel-6]
+                '6.6': !join [*repo_url, epel-6]
+                '7.0': !join [*repo_url, epel-7]
+                '7.0.1406': !join [*repo_url, epel-7]
+                '7.1.1503': !join [*repo_url, epel-7]
+            Fedora:
+                '20': !join [*repo_url, fedora-20]
+                '21': !join [*repo_url, fedora-21]
+
+            RedHat:
+                '6.5': !join [*repo_url, epel-6]
+                '6.6': !join [*repo_url, epel-6]
+                '6.7': !join [*repo_url, epel-6]
+                '7.0': !join [*repo_url, epel-7]
+                '7.1': !join [*repo_url, epel-7]
+

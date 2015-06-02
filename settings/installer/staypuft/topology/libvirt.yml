@@ -1,0 +1,61 @@
+---
+nodes:
+  tempest:
+      name: tempest
+      remote_user: root
+  controller:
+      name: controller
+
+libvirt:
+  dns_interface: eth2
+  dhcp_interface: eth2
+  nodes:
+    foreman:
+      ip_suffix: 10
+      image: !lookup
+      memory: 3072
+      cpus: 2
+    controller:
+
+
+  adapters:
+    - network_name: public_net
+      boot: 0
+
+    - network_name: pxe_net
+      boot: 1
+
+    - network_name: openstack_tenant
+      boot: 0
+
+    - network_name: openstack_floating_ips
+      boot: 0
+
+  networks:
+    - name: public_net
+      bridge: br0
+      public_network: true
+      libvirt_managed: false
+
+    - name: pxe_net
+      forward_mode: nat
+      ip_address: 192.168.70.1
+      ip_netmask: 255.255.255.0
+      libvirt_managed: true
+
+    - name: openstack_tenant
+      dhcp_enabled: true
+      forward_mode: none
+      ip_address: 172.16.16.1
+      ip_netmask: 255.255.255.0
+      dhcp_start: 172.16.16.2
+      dhcp_end: 172.16.16.254
+      libvirt_managed: true
+
+    - name: openstack_floating_ips
+      forward_mode: none
+      prefix: 192.168.123
+      ip_netmask: 255.255.255.0
+      libvirt_managed: true
+
+

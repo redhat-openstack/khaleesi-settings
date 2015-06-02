@@ -1,0 +1,5 @@
+component:
+  name: nova
+  short_name: nova
+  dir: !join [ !env PWD, /../nova]
+

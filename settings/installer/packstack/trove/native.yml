@@ -1,0 +1,8 @@
+---
+packstack:
+    config:
+        CONFIG_TROVE_INSTALL: y
+
+job:
+  archive:
+  - /etc/trove

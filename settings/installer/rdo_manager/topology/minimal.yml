@@ -1,0 +1,19 @@
+installer:
+    node:
+        controller:
+            remote_user: heat-admin
+            scale: 1
+        tester:
+            remote_user: root
+        compute:
+            scale: 1
+            type: Compute
+        blockstorage:
+            scale: 1
+            type: Cinder-Storage
+        swiftstorage:
+            scale: 1
+            type: Swift-Storage
+        cephstorage:
+            scale: 0
+            type: Ceph-Storage

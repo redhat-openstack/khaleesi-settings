@@ -1,0 +1,5 @@
+component:
+  name: swift
+  short_name: sft
+  dir: !join [ !env PWD, /../swift]
+

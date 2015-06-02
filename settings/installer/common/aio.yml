@@ -1,0 +1,6 @@
+--- !extends:node_prefix.yml
+
+topology:
+    short_name: aio
+    name: all-in-one
+

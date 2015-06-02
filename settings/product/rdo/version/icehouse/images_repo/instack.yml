@@ -1,0 +1,3 @@
+product:
+    instack_images:
+        Fedora: 'http://repos.fedorapeople.org/repos/openstack-m/tripleo-images-rdo-icehouse'

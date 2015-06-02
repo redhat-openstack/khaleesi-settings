@@ -1,0 +1,21 @@
+--- !extends:common/image.yml
+
+# TODO: khaleesi use the dict below
+provisioner:
+    credentials: !join [ !env HOME , /rackspace_creds]
+    tenant_name: REPLACE_ME
+    key_file: rdo-ci-public.pem
+    key_name: rdo-ci-public
+    network_rax: public,default,packstack_int
+    network:
+        nic:
+            net_1:
+                name: public
+                id:   public
+            net_2:
+                name: default
+                id:   default
+            net_3:
+                name: packstack_int
+                id:   packstack_int
+

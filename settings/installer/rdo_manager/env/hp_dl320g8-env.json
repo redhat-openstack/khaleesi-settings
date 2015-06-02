@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "pm_password": "password",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "2c:76:8a:ac:a4:00"
+      ],
+      "cpu": "4",
+      "memory": "32768",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "REPLACE_ME",
+      "pm_addr": "10.19.152.90"
+    },
+    {
+      "pm_password": "password",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "2c:76:8a:ac:a3:6a"
+      ],
+      "cpu": "4",
+      "memory": "32768",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "REPLACE_ME",
+      "pm_addr": "10.19.152.94"
+    },
+    {
+      "pm_password": "password",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "2c:76:8a:ac:a5:86"
+      ],
+      "cpu": "4",
+      "memory": "32768",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "REPLACE_ME",
+      "pm_addr": "10.19.152.96"
+    },
+    {
+      "pm_password": "password",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "2c:76:8a:ac:9a:32"
+      ],
+      "cpu": "4",
+      "memory": "32768",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "REPLACE_ME",
+      "pm_addr": "10.19.152.98"
+    }
+
+  ]
+}

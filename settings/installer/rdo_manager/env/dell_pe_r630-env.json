@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {
+      "pm_password": "calvin",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "B8:2A:72:FD:B8:40"
+      ],
+      "cpu": "12",
+      "memory": "128950",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "root",
+      "pm_addr": "10.9.10.131"
+    },
+    {
+      "pm_password": "calvin",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "74:E6:E2:FA:16:FE"
+      ],
+      "cpu": "12",
+      "memory": "128950",
+      "disk": "900",
+      "arch": "x86_64",
+      "pm_user": "root",
+      "pm_addr": "10.9.10.134"
+    }
+
+  ]
+}

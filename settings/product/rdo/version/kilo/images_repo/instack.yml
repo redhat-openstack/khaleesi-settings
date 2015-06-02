@@ -1,0 +1,13 @@
+product:
+    instack_images:
+        Fedora:
+            '20': 'http://REPLACE_ME/~bnemec/fedora-juno-koji/'
+        RedHat:
+            '7.0': 'http://REPLACE_ME/~jslagle/tripleo-images-juno-rhos-6/'
+            '7.1': 'http://REPLACE_ME/~jslagle/tripleo-images-juno-rhos-6/'
+        CentOS:
+            '7.0': 'http://REPLACE_ME/~jslagle/tripleo-images-juno-rhos-6/'
+            '7.0.1406': 'http://REPLACE_ME/~jslagle/tripleo-images-juno-rhos-6/'
+            '7.1.1503': 'http://REPLACE_ME/~jslagle/tripleo-images-juno-rhos-6/'
+
+

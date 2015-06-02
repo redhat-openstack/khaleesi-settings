@@ -1,0 +1,6 @@
+[gerrit]
+host=REPLACE_ME
+port=22
+project=khaleesi-settings.git
+defaultbranch=dev/tkammer
+

@@ -1,0 +1,49 @@
+distro:
+    config:
+        ntp_server: 0.pool.ntp.org
+        dns_servers:
+          - 10.34.32.1
+          - 10.34.32.3
+        reboot_delay: 1
+        initial_boot_timeout: 180 #seconds
+    images:
+        rhel:
+          '6.6':
+            remote_user: cloud-user
+            guest_image_name: "rhel-guest-image-6.6-20150127.0.x86_64.qcow2"
+            remote_file_server: "http://REPLACE_ME/brewroot/packages/rhel-guest-image/6.6/20150127.0/images/"
+          '6.7':
+            remote_user: cloud-user
+            guest_image_name: "rhel-guest-image-6.7-20150427.0.x86_64.qcow2"
+            remote_file_server: "http://REPLACE_ME/brewroot/packages/rhel-guest-image/6.7/20150427.0/images/"
+          '7.0':
+            remote_user: cloud-user
+            guest_image_name: "rhel-guest-image-7.0-20150126.0.x86_64.qcow2"
+            remote_file_server: "http://REPLACE_ME/brewroot/packages/rhel-guest-image/7.0/20150126.0/images/"
+          '7.1':
+            remote_user: cloud-user
+            guest_image_name: "rhel-guest-image-7.1-20150224.0.x86_64.qcow2"
+            remote_file_server: "http://REPLACE_ME/brewroot/packages/rhel-guest-image/7.1/20150224.0/images/"
+        fedora:
+          '20':
+            remote_user: fedora
+            guest_image_name: "Fedora-x86_64-20-20140618-sda.qcow2"
+            remote_file_server: "http://dl.fedoraproject.org/pub/alt/openstack/20/x86_64/"
+          '21':
+            remote_user: fedora
+            guest_image_name: "Fedora-Cloud-Base-20141203-21.x86_64.qcow2"
+            remote_file_server: "http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/"
+        centos:
+          '7.0':
+            remote_user: cloud-user
+            guest_image_name: "CentOS-7-x86_64-GenericCloud-GA-7.0.1406_01.qcow2"
+            remote_file_server: "http://cloud.centos.org/centos/7/devel/"
+          '7.0.1406':
+            remote_user: cloud-user
+            guest_image_name: "CentOS-7-x86_64-GenericCloud-GA-7.0.1406_01.qcow2"
+            remote_file_server: "http://cloud.centos.org/centos/7/devel/"
+          '7.1.1503':
+            remote_user: cloud-user
+            guest_image_name: "CentOS-7-x86_64-GenericCloud-GA-7.0.1406_01.qcow2"
+            remote_file_server: "http://cloud.centos.org/centos/7/devel/"
+

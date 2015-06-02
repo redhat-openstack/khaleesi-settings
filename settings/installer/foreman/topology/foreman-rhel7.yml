@@ -1,0 +1,84 @@
+--- !extends:../../common/multinode.yml
+
+foreman:
+    fqdn: "{{ tmp.node_prefix }}foreman.example.com"
+
+
+nodes:
+    controller01: &controller
+        name: '{{ tmp.node_prefix }}controller01'
+        hostname: '{{ tmp.node_prefix }}controller01.example.com'
+        image_id: '{{ provisioner.image[distro.name][distro.version].id }}'
+        remote_user: !lookup provisioner.image[distro.name][distro.version].remote_user
+        flavor_id: !lookup provisioner.flavor.large
+        nics:
+            - net-id: !lookup provisioner.network.nic.net_1.id
+            - net-id: !lookup provisioner.network.nic.net_2.id
+            - net-id: !lookup provisioner.network.nic.net_3.id
+
+        net_interfaces:
+            - { interface: 'eth1',
+                network_name: !lookup provisioner.network.nic.net_2.name }
+            - { interface: 'eth2',
+                network_name: !lookup provisioner.network.nic.net_3.name }
+        groups:
+            - controller
+            - openstack_nodes
+            - foreman_node
+            - foreman_installer
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: 'HA All In One Controller'
+
+    controller02:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}controller02'
+        hostname: '{{ tmp.node_prefix }}controller02.example.com'
+
+    controller03:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}controller03'
+        hostname: '{{ tmp.node_prefix }}controller03.example.com'
+
+
+    compute:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}compute'
+        hostname: '{{ tmp.node_prefix }}compute.example.com'
+        groups:
+            - compute
+            - foreman_node
+            - foreman_installer
+            - openstack_nodes
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: "Compute (Neutron)"
+
+
+    foreman:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}foreman'
+        hostname: '{{ tmp.node_prefix }}foreman.example.com'
+        image_id: "{{ provisioner.image['rhel']['7.0'].id }}"
+        remote_user: cloud-user
+        groups:
+            - foreman
+            - openstack_nodes
+            - foreman_installer
+            - !lookup product.name
+            - !lookup installer.network.plugin.name
+        node_hostgroup: None
+
+
+    tester:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}tester'
+        hostname: '{{ tmp.node_prefix }}tester.example.com'
+        image_id: !lookup provisioner.image.fedora.21.id
+        remote_user: !lookup provisioner.image.fedora.21.remote_user
+        flavor_id: !lookup provisioner.flavor.small
+        groups:
+            - tester
+            - openstack_nodes
+        node_hostgroup: None
+

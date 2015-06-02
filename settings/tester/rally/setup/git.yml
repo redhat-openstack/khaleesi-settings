@@ -1,0 +1,15 @@
+tester:
+    name: rally
+    git:
+      repo: https://git.openstack.org/openstack/rally
+      revision: HEAD
+      local: true
+    use_virtual_env: true
+    tempest:
+      base: '/home/{{ provisioner.nodes.tester.remote_user }}/.rally/tempest'
+      git:
+        repo: https://github.com/redhat-openstack/tempest.git
+        revision: juno
+        local: true
+      regex: network_basic_ops
+      conf: '/home/{{ provisioner.nodes.tester.remote_user }}/rally-dir/tempest.conf'

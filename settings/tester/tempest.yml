@@ -1,0 +1,16 @@
+--- !extends:common.yml
+tester:
+    type: tempest
+    dir: tempest-dir
+    image_id: !lookup provisioner.images.fedora.22.id
+    remote_user: !lookup provisioner.images.fedora.22.remote_user
+    images:
+        cirros:
+            url:
+            id: cirros-0.3.1-x86_64-disk.img
+
+logs:
+    - 'etc/tempest.conf'
+    - 'etc/tempest.conf.sample'
+    - '*.log'
+    - '*.xml'

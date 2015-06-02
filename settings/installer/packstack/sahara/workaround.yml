@@ -1,0 +1,8 @@
+--- !extends:common/shared.yml
+
+provisioner:
+    nodes:
+        controller:
+            groups:
+                - sahara
+

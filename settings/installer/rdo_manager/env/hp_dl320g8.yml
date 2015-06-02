@@ -1,0 +1,8 @@
+installer:
+    env:
+        type: baremetal
+        model: hp_dl320g8
+        answers_local_interface: em2
+        neutron_public_interface: nic2
+        network_cidr: 10.0.0.0/8
+        network_gateway: 192.0.2.1

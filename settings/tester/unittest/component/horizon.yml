@@ -1,0 +1,5 @@
+component:
+  name: horizon
+  short_name: hzn
+  dir: !join [ !env PWD, /../horizon]
+

@@ -1,0 +1,39 @@
+--- !extends:common/node_prefix.yml
+
+installer:
+    type: rdo-manager
+    short_name: rmgr
+    user:
+        stack:
+            name: 'stack'
+            password_hash: $6$rounds=100000$j/3ka1xIqD.du6XZ$RX2NLJ50W9aE4FPqb3WLA7c.Djt2fFNKrfGyqVd.4aoDvrV11pri7sLluAg..WIw980ZBem/EkO/Ts4CtyERm0
+            password_text: stack
+        root:
+            name: 'root'
+            password_hash: $6$rounds=100000$j/3ka1xIqD.du6XZ$RX2NLJ50W9aE4FPqb3WLA7c.Djt2fFNKrfGyqVd.4aoDvrV11pri7sLluAg..WIw980ZBem/EkO/Ts4CtyERm0
+            password_text: stack
+
+provisioner:
+    remote_user: 'stack'
+
+jenkins:
+    workspace: !join [ !env HOME, /jenkins/workspace]
+    job_name: !env JOB_NAME
+
+job:
+    host: !env [BEAKER_MACHINE, replace_me ]
+    archive:
+        - /home/stack/.instack/install-undercloud.log
+        - /var/log/glance
+        - /var/log/heat
+        - /var/log/keystone
+        - /var/log/neutron
+        - /var/log/nova
+        - /var/log/openvswitch
+        - /var/log/os-apply-config.log
+        - /var/log/rabbitmq
+
+#required while rdo/osp-manager requires both rhos and rdo
+product:
+    rpmrepo_override:
+        RedHat: http://rhos-release.REPLACE_ME/repos/rhos-release/rhos-release-latest.noarch.rpm

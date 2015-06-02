@@ -1,0 +1,5 @@
+component:
+  name: heat
+  short_name: heat
+  dir: !join [ !env PWD, /../heat]
+

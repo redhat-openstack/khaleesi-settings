@@ -1,0 +1,95 @@
+--- !extends:../../common/multinode.yml
+
+nodes:
+    staypuft: &staypuft
+        name: '{{ tmp.node_prefix }}staypuft'
+        fqdn: '{{ tmp.node_prefix }}staypuft.{{ provisioner.network.nic.net_1.domain }}'
+        image_url : !lookup distro.images[distro.name][distro.version].remote_file_server
+        image_name : !lookup distro.images[distro.name][distro.version].guest_image_name
+        remote_user: !lookup distro.images[distro.name][distro.version].remote_user
+        flavor: !lookup provisioner.flavor.large
+        provisioning_net_suffix: "2"
+        nics:
+            - net_name: !lookup provisioner.network.nic.net_1.name
+              boot: 0
+            - net_name: !lookup provisioner.network.nic.net_2.name
+              boot: 0
+            - net_name: !lookup provisioner.network.nic.net_3.name
+              boot: 0
+            - net_name: !lookup provisioner.network.nic.net_4.name
+              boot: 0
+        groups:
+            - libvirt_guest
+            - staypuft_host
+            - !lookup installer.name
+            - !lookup product.name
+
+    tester:
+        <<: *staypuft
+        name: '{{ tmp.node_prefix }}tester'
+        fqdn: '{{ tmp.node_prefix }}tester.{{ provisioner.network.nic.net_1.domain }}'
+        image_url: !lookup distro.images.fedora.20.remote_file_server
+        image_name: !lookup distro.images.fedora.20.guest_image_name
+        remote_user: !lookup distro.images.fedora.20.remote_user
+        flavor: !lookup provisioner.flavor.small
+        groups:
+            - libvirt_guest
+            - tester
+            - !lookup installer.name
+            - !lookup product.name
+
+    controller: &controller
+        name: '{{ tmp.node_prefix }}controller'
+        fqdn: '{{ tmp.node_prefix }}controller.{{ provisioner.network.nic.net_1.domain }}'
+        create_empty: true
+        flavor: !lookup provisioner.flavor.medium
+        nics:
+            - net_name: !lookup provisioner.network.nic.net_1.name
+              boot: 0
+            - net_name: !lookup provisioner.network.nic.net_2.name
+              boot: 1
+            - net_name: !lookup provisioner.network.nic.net_3.name
+              boot: 0
+            - net_name: !lookup provisioner.network.nic.net_4.name
+              boot: 0
+        groups:
+            - controller
+            - !lookup installer.name
+            - !lookup product.name
+
+    compute:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}compute'
+        fqdn: '{{ tmp.node_prefix }}compute.{{ provisioner.network.nic.net_1.domain }}'
+        groups:
+            - compute
+            - !lookup installer.name
+            - !lookup product.name
+
+    networker:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}networker'
+        fqdn: '{{ tmp.node_prefix }}networker.{{ provisioner.network.nic.net_1.domain }}'
+        groups:
+            - networkder
+            - !lookup installer.name
+            - !lookup product.name
+
+    storage:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}storage'
+        fqdn: '{{ tmp.node_prefix }}storage.{{ provisioner.network.nic.net_1.domain }}'
+        groups:
+            - tester
+            - !lookup installer.name
+            - !lookup product.name
+
+    generic:
+        <<: *controller
+        name: '{{ tmp.node_prefix }}generic'
+        fqdn: '{{ tmp.node_prefix }}generic.{{ provisioner.network.nic.net_1.domain }}'
+        groups:
+            - generic
+            - !lookup installer.name
+            - !lookup product.name
+

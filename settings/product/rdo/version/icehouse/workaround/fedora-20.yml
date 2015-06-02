@@ -1,0 +1,6 @@
+workaround:
+    default_floating_pool: false
+    nova_objectstore_install: true
+    s3_objectstore_endpoint: true
+    quickstack_cinder: true
+    reseller_admin_role: true

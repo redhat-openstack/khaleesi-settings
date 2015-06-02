@@ -1,0 +1,6 @@
+--- !extends:../tenant/REPLACE_ME.yml
+
+provisioner:
+    username: REPLACE_ME
+    password: override password
+

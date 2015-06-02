@@ -1,0 +1,27 @@
+--- !extends:common.yml
+tester:
+    type: rally
+    image_id: !lookup provisioner.images.fedora.20.id
+    remote_user: !lookup provisioner.images.fedora.20.remote_user
+    rally:
+        dir: '/home/{{ provisioner.nodes.tester.remote_user }}/rally-dir'
+        additional_default_settings:
+          - section: compute
+            option: flavor_ref
+            value: 1
+        public_subnet_cidr: !lookup provisioner.network.network_list.external.subnet_cidr
+        public_allocation_start: !lookup provisioner.network.network_list.external.allocation_start
+        public_allocation_end: !lookup provisioner.network.network_list.external.allocation_end
+        public_subnet_gateway: !lookup provisioner.network.network_list.external.subnet_gateway
+        cirros_image_file: cirros-0.3.1-x86_64-disk.img
+        path: /opt/rally/bin
+        deployment: cloud_under_test
+        taskfile: rally-jobs/mytest.json
+        outputdir: /tmp/rally_output
+
+job:
+    archive:
+        - '{{ tester.rally.outputdir }}/*.log'
+        - '{{ tester.rally.outputdir }}/*.xml'
+        - '{{ tester.rally.outputdir }}/*.html'
+        - '{{ tester.rally.outputdir }}/*.txt'

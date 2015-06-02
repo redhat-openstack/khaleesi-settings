@@ -1,0 +1,27 @@
+staypuft:
+  deploy:
+    repo_path: http://download.eng.brq.REPLACE_ME/released/RHEL-7/7.0/Server/x86_64/os/
+    ip:
+    login:
+      username: admin
+      password: redhat
+    deployment_settings:
+      name: "testHA"
+      description: ""
+      layout_name: "High Availability Controllers / Compute"
+      networking: "neutron"
+      amqp_provider: "rabbitmq"
+      platform: "rhel7"
+      single_password: "passwd123"
+      single_password_confirmation: "passwd123"
+    services_configuration:
+        neutron:
+          network_segmentation: "vxlan"
+        glance:
+          driver_backend: "ceph"
+        cinder:
+           backend_ceph: "true"
+    deployment_config: HAconfig_ceph.yml
+    start_node: 0
+    end_node: 4
+    hostgroup_association: { "HA Controller" : 3, "Compute (Neutron)" : 1, "Ceph Storage Node (OSD)" : 1, "Generic RHEL 7" : 0 }

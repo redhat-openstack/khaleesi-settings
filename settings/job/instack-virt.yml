@@ -1,0 +1,19 @@
+--- !extends:common/all.yml
+
+jenkins:
+  workspace:  !join [ !env HOME, /jenkins/workspace]
+  job_name: !env JOB_NAME
+  rhos_ci_home: !env HOME
+job_var:
+  key_file: "{{ provisioner.key_file_name }}"
+  id_rsa: id_rsa
+  id_rsa_pub: "{{ provisioner.pub_file_name }}"
+  config_file_remote: !env [CONFIG_FILE_REMOTE, "https://raw.githubusercontent.com/agroup/instack-jenkins/master/config.yml"]
+  config_file_name: config.yml
+  vm_pass: stack
+  instack_virt_host: !env [BEAKER_MACHINE, replace_me]
+  vm_ssh_port: 4067
+  vm_tempest_port: 4068
+  tempest_machine_port: 4069
+
+

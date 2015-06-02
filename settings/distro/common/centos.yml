@@ -1,0 +1,10 @@
+--- !extends:all.yml
+
+distro:
+    name: centos
+    short_name: c
+
+job:
+    archive:
+        - /etc/yum.repos.d
+        - /etc/selinux

@@ -1,0 +1,11 @@
+--- !extends:common.yml
+provisioner:
+    type: foreman
+    foreman:
+        auth_url: https://theforeman.eng.lab.tlv.REPLACE_ME/
+        username: rhos-qe
+        password: qum5net
+        management:
+            strategy: foreman
+            action: cycle
+        wait_for_host: true
