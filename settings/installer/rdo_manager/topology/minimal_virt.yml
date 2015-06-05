@@ -1,5 +1,5 @@
 installer:
-    node:
+    nodes:
         controller:
             remote_user: heat-admin
             scale: 1
