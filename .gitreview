@@ -1,6 +1,6 @@
 [gerrit]
-host=REPLACE_ME
-port=22
-project=khaleesi-settings.git
+host=review.gerrithub.io
+port=29418
+project=redhat-openstack/khaleesi-settings.git
 defaultbranch=master
 
