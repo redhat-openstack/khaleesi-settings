@@ -1,2 +1,17 @@
 provisioner:
     url: 'http://admin.ci.centos.org:8080/'
+    network:
+        network_list:
+            management:
+                name: eth0
+                id: 0
+            data:
+                name: eth1
+                id: 1
+            external:
+                name: eth2
+                id: 2
+                #subnet_cidr: 192.168.1.0/24
+                #subnet_gateway: 192.168.1.1
+                #allocation_start: 192.168.1.200
+                #allocation_end: 192.168.1.220
