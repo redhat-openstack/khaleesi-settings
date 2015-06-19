@@ -1,0 +1,10 @@
+---
+provisioner:
+    network:
+        vlan:
+            external:
+                tag:
+            internal:
+                range:
+                    start: 290
+                    end: 340

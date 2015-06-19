@@ -1,0 +1,17 @@
+--- !extends:common/common.yml
+
+installer:
+    type: rdo-manager
+    short_name: rmgr
+
+provisioner:
+    remote_user: 'stack'
+
+jenkins:
+    workspace: !join [ !env HOME, /jenkins/workspace]
+    job_name: !env JOB_NAME
+
+job:
+    archive:
+        - /home/stack/.instack/install-undercloud.log
+        - /home/stack/instack-build-images.log

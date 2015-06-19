@@ -1,0 +1,19 @@
+installer:
+    network_restart: True
+    nodes:
+        controller:
+            remote_user: heat-admin
+        tester:
+            remote_user: root
+        compute:
+            type: Compute
+            nova_list_type: Compute
+        blockstorage:
+            type: Cinder-Storage
+            nova_list_type: CinderStorage
+        swiftstorage:
+            type: Swift-Storage
+            nova_list_type: SwiftStorage
+        cephstorage:
+            type: Ceph-Storage
+            nova_list_type: CephStorage

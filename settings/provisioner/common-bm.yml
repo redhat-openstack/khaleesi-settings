@@ -1,0 +1,17 @@
+--- !extends:common.yml
+# NOTE(psedlak): hotfix for tester/tempest enforcing provisioner/openstack
+#
+# the problem is that tester/tempest (due to structure redesing in dev/tkammer)
+# as try to simplify the structure, contains parts for provisioning
+# (adds tester node one asks for some tester)
+# but it is provisioner-specific (atm openstack)
+# and expects some extra variables, not used for bm provisioning etc
+#
+provisioner:
+  flavor:
+    small: 'not-used-for-baremetal'
+  images:
+    fedora:
+      '22':
+        id: 'not-used-for-baremetal'
+        remote_user: 'not-used-for-baremetal'
