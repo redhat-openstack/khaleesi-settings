@@ -1,9 +1,0 @@
-tempest:
-    dir: '/home/{{ nodes.tester.remote_user }}/tempest-dir'
-    setup_method: tempest/source
-    use_virtual_env: true
-    local_dir: !join [ !env WORKSPACE, /tempest ]
-    git:
-        repo: https://github.com/redhat-openstack/tempest.git
-        revision: HEAD
-        local: true

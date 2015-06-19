@@ -1,3 +1,4 @@
+--- !extends:common.yml
 provisioner:
   type: libvirt
   flavor:

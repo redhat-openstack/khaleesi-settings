@@ -1,3 +1,0 @@
---- !extends:instack-virt.yml
-args:
-    product: rdo

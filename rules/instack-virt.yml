@@ -1,7 +1,0 @@
---- !extends:instack-default.yml
-args:
-     installer-environ: virt
-     installer-topology: nodes_virt
-     job: instack-virt
-
-

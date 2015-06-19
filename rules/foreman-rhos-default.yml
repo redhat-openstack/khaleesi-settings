@@ -1,6 +1,0 @@
---- !extends:foreman.yml
-args:
-    product: rhos
-    job: foreman-puddle
-    installer-topology: default
-

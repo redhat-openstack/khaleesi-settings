@@ -1,11 +1,8 @@
 installer:
     network:
-        variant:
-            short_name: gre
+        variant: gre
 
-
-packstack:
-    config:
-        CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE: "gre"
-        CONFIG_NEUTRON_OVS_TUNNEL_RANGES: "1:1000"
-        CONFIG_NEUTRON_OVS_TUNNEL_IF: "eth1"
+    packstack:
+        config:
+            CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE: !lookup installer.network.variant
+            CONFIG_NEUTRON_OVS_TUNNEL_RANGES: "1:1000"

@@ -6,7 +6,7 @@ tmp:
 product:
     version: icehouse
     short_version: ih
-    rpm:
+    rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl
         RedHat: *rpmurl

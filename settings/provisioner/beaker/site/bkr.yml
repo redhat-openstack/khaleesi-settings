@@ -1,5 +1,5 @@
 provisioner:
-  beaker_checkout_script: 'khaleesi-settings/settings/provisioner/common/tools/beakerCheckOut.sh'
+  beaker_checkout_script: 'khaleesi-settings/settings/provisioner/beaker/files/beakerCheckOut.sh'
   host_lab_controller: !env [BEAKER_HOST_CONTROLLER, REPLACE_ME]
   whiteboard_message: 'InstackTesting'
   network:

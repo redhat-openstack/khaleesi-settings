@@ -1,4 +1,0 @@
---- !extends:instack-virt-rhos.yml
-args:
-     installer-deployment: tuskar_cli
-

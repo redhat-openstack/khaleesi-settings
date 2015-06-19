@@ -1,13 +1,6 @@
-tempest:
-    dir: '/home/{{ nodes.tester.remote_user }}/tempest-dir'
-    setup_method: tempest/rpm
+tester:
+    setup: rpm
+    rpm:
+        url: http://10.8.51.111/delorean/repos/current/
+        release: master
     use_virtual_env: false
-    repo:
-        Fedora:
-            '19': http://REPLACE_ME/~REPLACE_ME/openstack-tempest/fedora-19/
-            '20': http://REPLACE_ME/~REPLACE_ME/openstack-tempest/fedora-20/
-            '21': http://REPLACE_ME/~REPLACE_ME/openstack-tempest/fedora-21/
-        RedHat:
-            '7.0': http://REPLACE_ME/~REPLACE_ME/openstack-tempest/epel-7/
-            '7.1': http://REPLACE_ME/~REPLACE_ME/openstack-tempest/epel-7/
-
