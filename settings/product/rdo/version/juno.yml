@@ -6,7 +6,7 @@ tmp:
 product:
     version: juno
     short_version: ju
-    rpm:
+    rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl
         RedHat: *rpmurl

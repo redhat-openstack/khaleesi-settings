@@ -1,3 +1,4 @@
+--- !extends:common-bm.yml
 provisioner:
     type: beaker
     network:

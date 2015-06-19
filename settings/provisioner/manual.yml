@@ -1,7 +1,7 @@
----
+--- !extends:common.yml
 provisioner:
     type: manual
-    key_file: westest.pem
+    key_file: !env [ KEY_FILE, ~/.ssh/id_rsa ]
 
     image:
         rhel:
@@ -19,19 +19,3 @@ provisioner:
             '20':
                 id:
                 remote_user: fedora
-
-    network:
-        type: none
-        nic:
-            net_1:
-                id:
-                name: eth0
-            net_2:
-                id:
-                name: eth1
-
-    flavor:
-        tiny:
-        small:
-        medium:
-        large:

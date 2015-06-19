@@ -1,8 +1,0 @@
----
-tester:
-    tests: horizon
-
-nodes:
-    tester:
-        groups:
-            - horizon_intg_runner

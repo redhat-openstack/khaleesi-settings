@@ -1,4 +1,4 @@
----
+--- !extends:common-bm.yml
 provisioner:
     type: foreman
     foreman:
@@ -9,38 +9,3 @@ provisioner:
             strategy: foreman
             action: cycle
         wait_for_host: true
-
-    nodes:
-        controller: &controller
-            name: '{{ tmp.node_prefix }}controller'
-            hostname: <NEEDS TO BE OVERWRITTEN>
-            remote_user: root
-            key_file: rhos-jenkins.pem
-            rebuild: no
-            vlan:
-              id: 185
-
-            groups:
-                - controller
-                - openstack_nodes
-
-        compute-1:
-            <<: *controller
-            name: '{{ tmp.node_prefix }}compute-1'
-            groups:
-                - compute
-                - openstack_nodes
-
-        compute-2:
-            <<: *controller
-            name: '{{ tmp.node_prefix }}compute-2'
-            groups:
-                - compute
-                - openstack_nodes
-
-        network:
-            <<: *controller
-            name: '{{ tmp.node_prefix }}network'
-            groups:
-                - networker
-                - openstack_nodes

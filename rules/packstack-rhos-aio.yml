@@ -1,3 +1,0 @@
---- !extends:packstack-rhos.yml
-args:
-    installer-topology: aio_two_nic

@@ -1,3 +1,5 @@
----
+--- !extends:common.yml
 tester:
-    name: integration
+    type: integration
+    image_id: !lookup provisioner.images.fedora.20.id
+    remote_user: !lookup provisioner.images.fedora.20.remote_user

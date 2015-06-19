@@ -1,9 +1,8 @@
 installer:
     network:
-        variant:
-            short_name: flat
+        variant: flat
 
-packstack:
-    config:
-        CONFIG_NOVA_NETWORK_MANAGER: 'nova.network.manager.FlatDHCPManager'
-        CONFIG_NOVA_NETWORK_PUBIF: 'eth0'
+    packstack:
+        config:
+            CONFIG_NOVA_NETWORK_MANAGER: "nova.network.manager.FlatDHCPManager"
+            CONFIG_NOVA_NETWORK_PUBIF: "{{ ansible_default_ipv4.interface }}"

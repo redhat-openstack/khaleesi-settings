@@ -1,3 +1,0 @@
---- !extends:instack-virt.yml
-args:
-    product-version-images_repo: build_instack_images

@@ -33,18 +33,3 @@ use_astapor: '{{ product.version == "icehouse"  }}'
 #        "quickstack::nova_network::compute":
 #            string_parameters:
 #                auth_host: "{{ hostvars[controller_name].ansible_eth1.ipv4.address }}"
-
-job:
-    archive:
-        - /root/
-        - /var/log/
-        - /etc/nova
-        - /etc/ceilometer
-        - /etc/cinder
-        - /etc/glance
-        - /etc/keystone
-        - /etc/neutron
-        - /etc/ntp
-        - /etc/puppet
-        - /etc/qpid
-        - /etc/qpidd.conf

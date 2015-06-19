@@ -1,5 +1,5 @@
-tempest:
-    test_name: database
-    skip:
-        files: []
-        tests: []
+tester:
+    tempest:
+        test_regex: tempest.*\.database
+        whitelist: []
+        blacklist: []
