@@ -1,4 +1,0 @@
-installer:
-    network:
-        plugin:
-            name: neutron

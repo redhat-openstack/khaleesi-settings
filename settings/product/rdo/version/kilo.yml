@@ -6,7 +6,7 @@ tmp:
 product:
     version: kilo
     short_version: ki
-    rpm:
+    rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl
         RedHat: *rpmurl

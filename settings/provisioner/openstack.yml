@@ -1,3 +1,3 @@
+--- !extends:common.yml
 provisioner:
-    use_floating_ip: true
     type: openstack

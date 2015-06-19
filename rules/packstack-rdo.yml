@@ -1,4 +1,0 @@
---- !extends:packstack.yml
-args:
-    product: rdo
-

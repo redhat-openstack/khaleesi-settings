@@ -1,5 +1,0 @@
----
-# NOTE(mpavlase): This value is actually unused, it is here just for
-# compatibility with current jekins jobs structure. Ugly ksgen!
-tester:
-    setup: source

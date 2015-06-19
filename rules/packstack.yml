@@ -1,4 +1,0 @@
---- !extends:defaults.yml
-args:
-    installer: packstack
-    job: packstack

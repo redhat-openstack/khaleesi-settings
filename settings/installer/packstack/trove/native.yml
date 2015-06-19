@@ -1,7 +1,8 @@
 ---
-packstack:
-    config:
-        CONFIG_TROVE_INSTALL: y
+installer:
+    packstack:
+        config:
+            CONFIG_TROVE_INSTALL: y
 
 job:
   archive:

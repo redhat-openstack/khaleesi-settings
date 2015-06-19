@@ -1,4 +1,4 @@
---- !extends:node_prefix.yml
+--- !extends:common.yml
 
 topology:
     short_name: aio
