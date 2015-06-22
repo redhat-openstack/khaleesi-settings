@@ -3,17 +3,19 @@ installer:
     nodes:
         controller:
             remote_user: heat-admin
+            nova_list_type: controller
         tester:
             remote_user: root
         compute:
             type: Compute
-            nova_list_type: Compute
+            nova_list_type: compute
         blockstorage:
             type: Cinder-Storage
-            nova_list_type: CinderStorage
+            nova_list_type: cinderstorage
         swiftstorage:
             type: Swift-Storage
-            nova_list_type: SwiftStorage
+            nova_list_type: swiftstorage
         cephstorage:
             type: Ceph-Storage
-            nova_list_type: CephStorage
+            nova_list_type: cephstorage
+
