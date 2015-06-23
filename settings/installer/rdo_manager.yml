@@ -14,7 +14,7 @@ jenkins:
 job:
     archive:
         - /home/stack/.instack/install-undercloud.log
-        - /home/stack/instack-build-images.log
+        - /home/stack/openstack-build-images.log
 
 #required while rdo/osp-manager requires both rhos and rdo
 product:
