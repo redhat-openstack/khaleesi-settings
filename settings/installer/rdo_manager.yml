@@ -1,5 +1,6 @@
 --- !extends:common/common.yml
 
+# THIS IS A TEST COMMIT, DO NOT SUBMIT
 installer:
     type: rdo-manager
     short_name: rmgr
