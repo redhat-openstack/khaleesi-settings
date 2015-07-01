@@ -1,5 +1,4 @@
---- !extends:../../common/common.yml
-
+---
 provisioner:
     nodes:
         controller: &controller

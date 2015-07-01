@@ -1,0 +1,4 @@
+---
+installer:
+    network:
+        network_config_name: single_nic_vlans

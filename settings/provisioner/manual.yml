@@ -1,4 +1,4 @@
---- !extends:common.yml
+--- !extends:common/common.yml
 provisioner:
     type: manual
     key_file: !env [ KEY_FILE, ~/.ssh/id_rsa ]

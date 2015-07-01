@@ -1,4 +1,4 @@
----
+--- !extends:common.yml
 provisioner:
     network:
         vlan:

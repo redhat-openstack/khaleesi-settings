@@ -41,4 +41,4 @@ tempest:
         version: juno
     rpm:
         version: 20141105
-    use_custom_repo: false
+    use_custom_repo: true

@@ -1,4 +1,4 @@
---- !extends:common-bm.yml
+--- !extends:common/bm.yml
 provisioner:
     type: centosci
     network:

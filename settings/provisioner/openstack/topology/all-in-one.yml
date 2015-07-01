@@ -1,5 +1,4 @@
---- !extends:../../common/aio.yml
-
+---
 provisioner:
     nodes:
         controller: &controller

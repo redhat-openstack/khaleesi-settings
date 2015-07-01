@@ -1,5 +1,4 @@
---- !extends:../../common/multinode.yml
-
+---
 provisioner:
     nodes:
         controller: &controller
@@ -27,9 +26,9 @@ provisioner:
                 - controller
                 - openstack_nodes
 
-        network:
+        network1:
             <<: *controller
-            name: '{{ tmp.node_prefix }}network'
+            name: '{{ tmp.node_prefix }}network1'
             network:
                 <<: *network_params
                 interfaces:
@@ -39,6 +38,40 @@ provisioner:
                         config_params:
                             <<: *data_interface_params
                             ipaddr: 10.0.0.2
+
+            groups:
+                - openstack_nodes
+                - network
+
+        network2:
+            <<: *controller
+            name: '{{ tmp.node_prefix }}network2'
+            network:
+                <<: *network_params
+                interfaces:
+                    <<: *interfaces
+                    data:
+                        <<: *data_interface
+                        config_params:
+                            <<: *data_interface_params
+                            ipaddr: 10.0.0.3
+
+            groups:
+                - openstack_nodes
+                - network
+
+        network3:
+            <<: *controller
+            name: '{{ tmp.node_prefix }}network3'
+            network:
+                <<: *network_params
+                interfaces:
+                    <<: *interfaces
+                    data:
+                        <<: *data_interface
+                        config_params:
+                            <<: *data_interface_params
+                            ipaddr: 10.0.0.4
 
             groups:
                 - openstack_nodes
@@ -55,7 +88,7 @@ provisioner:
                         <<: *data_interface
                         config_params:
                             <<: *data_interface_params
-                            ipaddr: 10.0.0.3
+                            ipaddr: 10.0.0.5
 
             groups:
                 - openstack_nodes
@@ -72,7 +105,7 @@ provisioner:
                         <<: *data_interface
                         config_params:
                             <<: *data_interface_params
-                            ipaddr: 10.0.0.4
+                            ipaddr: 10.0.0.6
 
             groups:
                 - openstack_nodes

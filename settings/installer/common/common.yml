@@ -1,18 +1,10 @@
 node:
     prefix:
-        - !lookup product.short_name
         - !lookup installer.type
-        - !random 5
-        - !env [USER, ~, 8]
-        - !env [BUILD_NUMBER, ~]
+
 hostname:
     prefix:
         - !lookup installer.type
-        - !random 5
-
-tmp:
-    node_prefix: '{{ node.prefix | reject("none") | join("-") }}-'
-    hostname_prefix: '{{ hostname.prefix | reject("none") | join("-") }}-'
 
 installer:
     firewall:
@@ -27,8 +19,6 @@ installer:
 
 job:
     archive:
-        - /root/
-        - /var/log/
         - /var/lib/mysql
         - /etc/nova
         - /etc/ceilometer

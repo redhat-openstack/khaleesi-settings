@@ -1,4 +1,4 @@
---- !extends:common.yml
+--- !extends:common/common.yml
 provisioner:
     type: vagrant
     network:

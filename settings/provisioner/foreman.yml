@@ -1,10 +1,10 @@
---- !extends:common-bm.yml
+--- !extends:common/bm.yml
 provisioner:
     type: foreman
     foreman:
         auth_url: https://theforeman.eng.lab.tlv.REPLACE_ME/
         username: rhos-qe
-        password: qum5net
+        password: REPLACE_ME
         management:
             strategy: foreman
             action: cycle

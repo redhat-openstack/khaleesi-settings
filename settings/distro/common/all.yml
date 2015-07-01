@@ -1,6 +1,6 @@
 distro:
     config:
-        ntp_server: 0.pool.ntp.org
+        ntp_server: clock.REPLACE_ME
         dns_servers:
           - 10.34.32.1
           - 10.34.32.3

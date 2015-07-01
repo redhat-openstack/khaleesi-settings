@@ -1,3 +1,4 @@
+--- !extends:common/common.yml
 installer:
     type: packstack
 

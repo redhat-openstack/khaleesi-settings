@@ -1,8 +1,6 @@
+--- !extends:common/common.yml
 product:
   name: rdo
   short_name: rdo
   config:
     enable_epel: y
-
-workaround:
-    set_key_encrypted_volumes: true

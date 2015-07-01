@@ -1,12 +1,11 @@
 ---
-# if you touch this, don't forget to augment
-# settings/provisioner/common-bm.yml hotfix
 provisioner:
     nodes:
         tester: &tester
             name: '{{ tmp.node_prefix }}tester'
             hostname:
             rebuild: no
+            # TODO(yfried): decouple tester from provisioner/openstack refs
             flavor_id: !lookup provisioner.flavor.small
             image_id: !lookup tester.image_id
             remote_user: !lookup tester.remote_user
@@ -27,3 +26,9 @@ provisioner:
             groups: &groups
                 - tester
                 - openstack_nodes
+
+tester:
+    image_name: 'rhel'
+    image_version: '7.1'
+    image_id: !lookup provisioner.images[ !lookup tester.image_name ][ !lookup tester.image_version ].id
+    remote_user: !lookup provisioner.images[ !lookup tester.image_name ][ !lookup tester.image_version ].remote_user
