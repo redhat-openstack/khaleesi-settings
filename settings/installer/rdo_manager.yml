@@ -3,6 +3,15 @@
 installer:
     type: rdo-manager
     short_name: rmgr
+    tempest:
+        test_regex: tempest\.api
+        whitelist: []
+        blacklist: []
+        dir: tempest
+        images:
+            cirros:
+                url:
+                id: cirros-0.3.1-x86_64-disk.img
 
 provisioner:
     remote_user: 'stack'
