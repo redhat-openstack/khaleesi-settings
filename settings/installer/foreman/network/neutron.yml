@@ -1,0 +1,7 @@
+installer:
+    network:
+        plugin:
+            name: neutron
+        variant:
+            short_name: gre
+        auto_assign_floating_ip: true

@@ -1,0 +1,7 @@
+--- !extends:minimal.yml
+installer:
+    nodes:
+        node_count: 4
+        compute:
+            scale_change: 2
+

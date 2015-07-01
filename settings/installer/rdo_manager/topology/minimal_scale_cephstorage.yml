@@ -1,0 +1,8 @@
+--- !extends:minimal.yml
+installer:
+    nodes:
+        node_count: 4
+        cephstorage:
+            scale_change: 2
+
+

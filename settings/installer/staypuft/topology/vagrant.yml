@@ -1,0 +1,50 @@
+---
+nodes:
+  tempest:
+      name: tempest
+      remote_user: root
+  controller:
+      name: controller
+
+staypuft:
+  dns_interface: eth2
+  dhcp_interface: eth2
+  nodes:
+    foreman:
+      ip_suffix: 10
+      box: staypuft/rhel65
+      memory: 3072
+      cpus: 2
+
+  networks:
+    - adapter: 1
+      network_name: public_net
+      bridge: br0
+      public_network: true
+      boot: 0
+
+    - adapter: 2
+      network_name: pxe_net
+      dhcp_enabled: false
+      forward_mode: nat
+      prefix: 192.168.70
+      public_network: false
+      boot: 1
+
+    - adapter: 3
+      network_name: openstack_tenant
+      dhcp_enabled: true
+      forward_mode: none
+      prefix: 172.16.16
+      public_network: false
+      boot: 0
+
+    - adapter: 4
+      network_name: openstack_floating_ips
+      dhcp_enabled: false
+      forward_mode: none
+      prefix: 192.168.123
+      public_network: false
+      boot: 0
+
+

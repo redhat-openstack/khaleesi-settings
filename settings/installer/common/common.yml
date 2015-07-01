@@ -1,0 +1,46 @@
+node:
+    prefix:
+        - !lookup product.short_name
+        - !lookup installer.type
+        - !random 5
+        - !env [USER, ~, 8]
+        - !env [BUILD_NUMBER, ~]
+hostname:
+    prefix:
+        - !lookup installer.type
+        - !random 5
+
+tmp:
+    node_prefix: '{{ node.prefix | reject("none") | join("-") }}-'
+    hostname_prefix: '{{ hostname.prefix | reject("none") | join("-") }}-'
+
+installer:
+    firewall:
+        rules:
+            - ' -A INPUT -p tcp -m tcp --dport 22 -m comment --comment "001 QA incoming SSH" -j ACCEPT'
+            - ' -A INPUT -p icmp -m comment --comment "002 QA incoming ICMP" -j ACCEPT'
+            - ' -A INPUT -m state --state ESTABLISHED,RELATED -m comment --comment "003 QA incoming related session exist the host interface MGMT" -j ACCEPT'
+            - ' -A INPUT -i lo -m comment --comment "004 QA incoming loopback" -j ACCEPT'
+            - ' -A INPUT -p udp --sport 53 -m comment --comment "005 QA incoming DNS" -j ACCEPT'
+            - ' -A INPUT -p udp --sport 123 -m comment --comment "006 QA incoming NTP" -j ACCEPT'
+            - ' -P INPUT DROP'
+
+job:
+    archive:
+        - /root/
+        - /var/log/
+        - /var/lib/mysql
+        - /etc/nova
+        - /etc/ceilometer
+        - /etc/cinder
+        - /etc/glance
+        - /etc/keystone
+        - /etc/neutron
+        - /etc/swift
+        - /etc/heat
+        - /etc/libvirt
+        - /etc/rabbitmq
+        - /etc/ntp
+        - /etc/puppet
+        - /etc/qpid
+        - /etc/qpidd.conf

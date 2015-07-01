@@ -1,0 +1,21 @@
+--- !extends:common/all.yml
+
+job:
+  foo: bar
+
+staypuft:
+    khaleesi:
+        # main:
+        #     repo: https://github.com/redhat-openstack/khaleesi.git
+        #     branch: master
+        # settings:
+        #     repo: https://REPLACE_ME/gerrit/p/khaleesi-settings.git
+        #     branch: master
+        main:
+            repo: https://github.com/redhat-openstack/khaleesi.git
+            branch: master
+            localpath: !env PWD
+        settings:
+            repo: http://REPLACE_ME/git/khaleesi-settings.git
+            branch: master
+            localpath: !join [ !env PWD, /../khaleesi-settings ]

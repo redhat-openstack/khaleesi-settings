@@ -1,0 +1,4 @@
+---
+job:
+    archive:
+        - /etc/sahara

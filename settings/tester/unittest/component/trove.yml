@@ -1,0 +1,5 @@
+component:
+  name: trove
+  short_name: trv
+  dir: !join [ !env PWD, /../trove]
+

@@ -1,0 +1,8 @@
+---
+installer:
+  overcloud_images: import
+  images:
+        rhos:
+          '7-director':
+            rhel:
+              '7.1': "http://rhos-release.REPLACE_ME/mburns/2015-06-02.1-images/"

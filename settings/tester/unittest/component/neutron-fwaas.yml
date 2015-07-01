@@ -1,0 +1,5 @@
+component:
+  name: neutron-fwaas
+  short_name: ntrn-fw
+  dir: !join [ !env PWD, /../neutron-fwaas]
+

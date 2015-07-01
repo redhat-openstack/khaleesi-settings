@@ -1,0 +1,7 @@
+test:
+    type:
+        name: pep8-test
+        short_name: p8
+    env_name: rpm       # default test config to run from components
+                        # jenkins-config.yml
+
