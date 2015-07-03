@@ -18,7 +18,7 @@ provisioner:
 
 jenkins:
     workspace: !join [ !env HOME, /jenkins/workspace]
-    job_name: !env JOB_NAME
+    job_name: !env [JOB_NAME, ['']]
 
 job:
     archive:
