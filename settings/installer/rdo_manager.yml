@@ -25,6 +25,7 @@ job:
         - /home/stack/.instack/install-undercloud.log
         - /home/stack/stackrc
         - /home/stack/overcloud_deployment*.log
+        - /home/stack/undercloud_install*.log
         - /home/stack/*.json
         - /home/stack/deploy-overcloudrc
         - /home/stack/*.conf
