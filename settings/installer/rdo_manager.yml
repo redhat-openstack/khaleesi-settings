@@ -31,6 +31,7 @@ job:
         - /home/stack/*.conf
         - /home/stack/network-environment.yaml
         - /home/stack/openstack-build-images.log
+        - /home/stack/instack-test*.log
         - /home/stack/tempest/*.log
         - /home/stack/tempest/*.xml
 
