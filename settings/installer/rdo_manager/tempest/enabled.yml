@@ -1,0 +1,3 @@
+installer:
+    tempest:
+        enabled: true
