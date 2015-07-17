@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad9bd40_656474e5",
+        "filename": "settings/installer/rdo_manager/network/neutron/network_config/default.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1003529
+      },
+      "writtenOn": "2015-07-17T20:57:36Z",
+      "side": 1,
+      "message": "I think this should be network_config_name: network_env_default.yaml",
+      "revId": "6925bf3a588683fe598b08525a82809ed1cce22a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
