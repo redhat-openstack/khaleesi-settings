@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad9bd40_c6ed4bf1",
+        "filename": "hardware_environments/virt_default/network_configs/default/default.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000779
+      },
+      "writtenOn": "2015-07-17T16:30:28Z",
+      "side": 1,
+      "message": "we would have to change khaleesi if we renamed this file:\nhttps://github.com/redhat-openstack/khaleesi/blob/master/playbooks/installer/rdo-manager/run-overcloud.yml#L138",
+      "revId": "b0c888bfbc248323a7cffaa9f3e6f936b0de7854",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
