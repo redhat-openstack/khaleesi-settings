@@ -1,2 +1,7 @@
 hw_env:
   env_type: virt_default
+  network_cidr: 192.168.0.0/24
+  floating_ip_start: 172.16.23.100
+  floating_ip_end: 172.16.23.150
+  floating_ip_cidr: 172.16.23.0/24
+  network_gateway: 172.16.23.251
