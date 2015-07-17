@@ -16,6 +16,24 @@
       "revId": "b0c888bfbc248323a7cffaa9f3e6f936b0de7854",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad9bd40_e6896f27",
+        "filename": "hardware_environments/virt_default/network_configs/default/default.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000779
+      },
+      "writtenOn": "2015-07-17T16:40:20Z",
+      "side": 1,
+      "message": "Apologies - this is correct",
+      "parentUuid": "9ad9bd40_c6ed4bf1",
+      "revId": "b0c888bfbc248323a7cffaa9f3e6f936b0de7854",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
