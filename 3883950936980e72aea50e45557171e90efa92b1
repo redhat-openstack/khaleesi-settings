@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad9bd40_0c3ad6e6",
+        "filename": "settings/product/rdo/version/kilo/repo/delorean.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002471
+      },
+      "writtenOn": "2015-07-21T16:19:02Z",
+      "side": 1,
+      "message": "!lookup?",
+      "revId": "3883950936980e72aea50e45557171e90efa92b1",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad9bd40_ec3852f1",
+        "filename": "settings/product/rdo/version/kilo/repo/delorean_mgt.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002471
+      },
+      "writtenOn": "2015-07-21T16:19:02Z",
+      "side": 1,
+      "message": "is there a reason why this is a !join and not a !lookup?",
+      "revId": "3883950936980e72aea50e45557171e90efa92b1",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
