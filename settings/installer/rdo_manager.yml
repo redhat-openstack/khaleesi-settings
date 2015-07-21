@@ -24,16 +24,11 @@ job:
     archive:
         - /home/stack/.instack/install-undercloud.log
         - /home/stack/stackrc
-        - /home/stack/overcloud_deployment*.log
-        - /home/stack/undercloud_install*.log
+        - /home/stack/*.log
         - /home/stack/*.json
-        - /home/stack/deploy-overcloudrc
         - /home/stack/*.conf
+        - /home/stack/deploy-overcloudrc
         - /home/stack/network-environment.yaml
-        - /home/stack/openstack-build-images.log
-        - /home/stack/instack-test*.log
-        - /home/stack/openstack-*.log
-        - /home/stack/tempest/*.log
         - /home/stack/tempest/*.xml
 
 #required while rdo/osp-manager requires both rhos and rdo
