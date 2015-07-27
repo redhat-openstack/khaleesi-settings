@@ -1,4 +1,0 @@
----
-installer:
-    network:
-        network_config_name: bond_with_vlans
