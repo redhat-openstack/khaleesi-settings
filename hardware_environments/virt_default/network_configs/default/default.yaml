@@ -8,3 +8,7 @@ parameter_defaults:
   TenantAllocationPools: [{'start': '172.16.22.10', 'end': '172.16.22.100'}]
   ExternalAllocationPools: [{'start': '172.16.23.10', 'end': '172.16.23.100'}]
   ExternalInterfaceDefaultRoute: 172.16.23.251
+  NeutronExternalNetworkBridge: "''"
+
+parameters:
+  Controller-1::NeutronExternalNetworkBridge: "''"
