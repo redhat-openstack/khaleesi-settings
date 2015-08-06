@@ -8,3 +8,5 @@ provisioner:
                 range:
                     start: 290
                     end: 340
+
+base_dir: !env WORKSPACE

@@ -20,6 +20,8 @@ jenkins:
     workspace: !join [ !env HOME, /jenkins/workspace]
     job_name: !env [JOB_NAME, ['']]
 
+base_dir: !env WORKSPACE
+
 job:
     archive:
         - /home/stack/.instack/install-undercloud.log
