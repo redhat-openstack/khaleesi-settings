@@ -1,0 +1,3 @@
+installer:
+    deploy:
+        command: '--template'
