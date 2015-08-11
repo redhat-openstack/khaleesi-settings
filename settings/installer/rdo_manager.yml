@@ -42,3 +42,6 @@ job:
 product:
     rpmrepo_override:
         RedHat: http://rhos-release.REPLACE_ME/repos/rhos-release/rhos-release-latest.noarch.rpm
+
+defaults:
+    deploy: templates
