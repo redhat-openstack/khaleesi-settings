@@ -2,7 +2,7 @@
 
 installer:
     type: rdo-manager
-    short_name: rmgr
+    short_type: rmgr
     tempest:
         test_regex: tempest\.api
         whitelist: []
@@ -16,27 +16,20 @@ installer:
 provisioner:
     remote_user: 'stack'
 
-jenkins:
-    workspace: !join [ !env HOME, /jenkins/workspace]
-    job_name: !env [JOB_NAME, ['']]
-
 base_dir: !env WORKSPACE
 
 job:
     archive:
         - /home/stack/.instack/install-undercloud.log
         - /home/stack/stackrc
-        - /home/stack/overcloud_deployment*.log
-        - /home/stack/undercloud_install*.log
+        - /home/stack/*.log
         - /home/stack/*.json
-        - /home/stack/deploy-overcloudrc
         - /home/stack/*.conf
+        - /home/stack/deploy-overcloudrc
         - /home/stack/network-environment.yaml
-        - /home/stack/openstack-build-images.log
-        - /home/stack/instack-test*.log
-        - /home/stack/openstack-*.log
-        - /home/stack/tempest/*.log
         - /home/stack/tempest/*.xml
+        - /home/stack/tempest/*.log
+        - /home/stack/tempest/etc/*.conf
 
 #required while rdo/osp-manager requires both rhos and rdo
 product:
