@@ -3,4 +3,4 @@ installer:
         type: neutron
         label: &network_label myphysnet
         auto_assign_floating_ip: false
-        name: public
+        name: nova
