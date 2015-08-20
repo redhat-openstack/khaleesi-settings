@@ -38,3 +38,5 @@ product:
 
 defaults:
     deploy: templates
+    post_action: default
+    network: neutron
