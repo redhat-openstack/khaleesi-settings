@@ -2,9 +2,3 @@
 installer:
     network:
         isolation: none
-        virt_floating_ip_start: 192.0.2.50
-        virt_floating_ip_end: 192.0.2.100
-        virt_floating_ip_cidr: 192.0.2.0/24
-        virt_network_gateway: 192.0.2.1
-        network_type: flat
-        ExternalNetworkVlanID: null

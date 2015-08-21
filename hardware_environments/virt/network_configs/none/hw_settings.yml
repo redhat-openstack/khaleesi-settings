@@ -1,0 +1,10 @@
+hw_env:
+  env_type: virt
+  network_cidr: 192.168.0.0/24
+  floating_ip_end: 192.0.2.100
+  floating_ip_start: 192.0.2.50
+  floating_ip_cidr: 192.0.2.0/24
+  network_gateway: 192.0.2.1
+  network_type: flat
+  physical_network: datacentre
+  ExternalNetworkVlanID: null

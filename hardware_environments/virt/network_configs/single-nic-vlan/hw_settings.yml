@@ -1,0 +1,10 @@
+hw_env:
+  env_type: virt
+  network_cidr: 192.168.0.0/24
+  floating_ip_end: 172.16.23.240
+  floating_ip_start: 172.16.23.140
+  floating_ip_cidr: 172.16.23.128/25
+  network_gateway: 172.16.23.251
+  network_type: vlan
+  physical_network: datacentre
+  ExternalNetworkVlanID: 10
