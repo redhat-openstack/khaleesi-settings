@@ -51,3 +51,4 @@ defaults:
     network: neutron
     tempest: minimal
     updates: none
+    custom_deploy: none
