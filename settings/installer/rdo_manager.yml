@@ -40,3 +40,4 @@ defaults:
     post_action: default
     network: neutron
     tempest: minimal
+    updates: none
