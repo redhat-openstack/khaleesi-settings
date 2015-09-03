@@ -1,0 +1,10 @@
+---
+provisioner:
+    node_count: 2
+    host_cloud_networks:
+        provision:
+            cidr: $PROVISION_CIDR
+        private:
+            cidr: $PRIVATE_CIDR
+        public:
+            cidr: $PUBLIC_CIDR
