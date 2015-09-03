@@ -1,0 +1,5 @@
+---
+provisioner:
+    image:
+        remote_file_server: $REMOTE_FILE_SERVER
+        name: $IMAGE_NAME

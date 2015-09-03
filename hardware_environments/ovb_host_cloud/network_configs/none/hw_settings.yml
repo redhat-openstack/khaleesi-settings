@@ -1,0 +1,17 @@
+ hw_env:
+  env_type: ovb_host_cloud
+  answers_local_interface: eth1
+  neutron_public_interface: nic1
+  libvirt_type: qemu
+  network_cidr: 192.168.0.0/24
+  network: '172.25.0'
+  floating_ip_end: 172.25.0.100
+  floating_ip_start: 172.25.0.50
+  floating_ip_cidr: 172.25.0.0/16
+  network_gateway: 172.25.0.1
+  dns_server: $DNS_SERVER
+  remote_mgmt: bmc
+  network_type: flat
+  physical_network: datacentre
+  ExternalNetworkVlanID: null
+  deploy_timeout: 500
