@@ -4,7 +4,6 @@ installer:
     type: rdo-manager
     short_type: rmgr
     tempest:
-        test_regex: tempest\.api
         whitelist: []
         blacklist: []
         dir: tempest
@@ -40,3 +39,4 @@ defaults:
     deploy: templates
     post_action: default
     network: neutron
+    tempest: minimal

@@ -1,3 +1,4 @@
 installer:
     tempest:
         enabled: false
+        test_regex: disabled

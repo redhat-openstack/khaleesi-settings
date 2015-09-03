@@ -1,3 +1,4 @@
 installer:
     tempest:
         enabled: true
+        test_regex: tempest\.api
