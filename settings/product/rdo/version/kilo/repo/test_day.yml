@@ -17,7 +17,7 @@ product:
                 '7.0': !join [*centos_repo_url]
                 '7.1': !join [*centos_repo_url]
         delorean_mgt:
-            repo_file: delorean-rdo-manager-kilo.repo
+            repo_file: delorean-rdo-management.repo
             CentOS:
                 '7.0': !join [*mgt_centos_repo_url]
                 '7.0.1406': !join [*mgt_centos_repo_url]
