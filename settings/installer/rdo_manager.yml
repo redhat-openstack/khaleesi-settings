@@ -16,7 +16,13 @@ installer:
             url: http://download.cirros-cloud.net/0.3.4/
             id: cirros-0.3.4-x86_64-disk.img
     tempest:
+        whitelist: []
+        blacklist: []
         dir: tempest
+        images:
+            cirros:
+                url: http://download.cirros-cloud.net/0.3.4/
+                id: cirros-0.3.4-x86_64-disk.img
 
 provisioner:
     remote_user: 'stack'
