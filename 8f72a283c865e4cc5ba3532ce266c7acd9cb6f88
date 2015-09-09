@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ae5cdf2_e14a9026",
+        "filename": "settings/tester/tempest.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001189
+      },
+      "writtenOn": "2015-09-09T16:14:20Z",
+      "side": 1,
+      "message": "will not work with older rhel/centos (6..) as there is py26 ... we will need tmp.xxx lookup mapping here, will provide more info later as now i\u0027m in rush, thx",
+      "revId": "8f72a283c865e4cc5ba3532ce266c7acd9cb6f88",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
