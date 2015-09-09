@@ -4,8 +4,12 @@ tmp:
     - &repo_url 'https://rdoproject.org/repos/openstack-kilo/'
 
 product:
-    version: kilo
+    full_version: kilo
     short_version: ki
+    version:
+        major: 7
+        minor: 0
+        code_name: kilo
     rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl

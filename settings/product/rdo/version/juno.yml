@@ -4,8 +4,12 @@ tmp:
     - &repo_url 'http://repos.fedorapeople.org/repos/openstack/openstack-juno/'
 
 product:
-    version: juno
+    full_version: juno
     short_version: ju
+    version:
+        major: 6
+        minor: 0
+        code_name: juno
     rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl
@@ -38,6 +42,6 @@ product:
 # custom repos for tempest RPM are defined in settings/tester/tempest/setup/rpm.yml
 tempest:
     rdo:
-        rpm: https://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo-1.noarch.rpm 
+        rpm: https://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo-1.noarch.rpm
         version: kilo
     use_custom_repo: false

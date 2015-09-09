@@ -4,8 +4,12 @@ tmp:
     - &repo_url 'https://repos.fedorapeople.org/repos/openstack/openstack-kilo/'
 
 product:
-    version: kilo
-    short_version: ki
+    full_version: liberty
+    short_version: li
+    version:
+        major: 8
+        minor: 0
+        code_name: liberty
     rpm:
         CentOS: *rpmurl
         Fedora: *rpmurl
