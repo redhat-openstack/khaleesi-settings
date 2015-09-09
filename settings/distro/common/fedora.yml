@@ -4,6 +4,8 @@ distro:
     name: fedora
     short_name: f
     config:
+        ntp_server: 0.rhel.pool.ntp.org
+        ntp_server_ip: 212.199.182.150
         selinux: permissive
 
 job:
