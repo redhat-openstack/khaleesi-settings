@@ -1,5 +1,5 @@
 provisioner:
-    url: 'http://8.21.28.222:5000/v2.0'
+    auth_url: !env OS_AUTH_URL
     network:
         name: external
         type: neutron
@@ -7,3 +7,21 @@ provisioner:
         small: 2
         medium: 3
         large: 4
+    network:
+        type: neutron
+        name: public
+        use_floating_ip: true
+        network_list:
+            management:
+                name: rdo-ci
+                id: 11544084-4bab-4ac3-8a3d-97ee5df93bfe
+            data:
+                name: packstack_int
+                id: 1b26f1df-f06a-4437-ae38-4af8c7cb68ef
+            external:
+                name: packstack_pub
+                id: 73b283f8-bb73-4a4a-9a83-6bc94eb2fb65
+        public_subnet_cidr: 192.168.50.0/24
+        public_allocation_start: 192.168.50.200
+        public_allocation_end: 192.168.50.220
+        public_subnet_gateway: 192.168.50.1
