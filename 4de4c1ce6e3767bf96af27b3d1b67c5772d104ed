@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ae5cdf2_dc2497c8",
+        "filename": "settings/provisioner/openstack/site/trystack/tenant/common/image.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-09-09T22:04:21Z",
+      "side": 1,
+      "message": "This is actually the fedora 22 uuid ?",
+      "range": {
+        "startLine": 11,
+        "startChar": 36,
+        "endLine": 11,
+        "endChar": 48
+      },
+      "revId": "4de4c1ce6e3767bf96af27b3d1b67c5772d104ed",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
