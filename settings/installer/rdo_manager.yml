@@ -30,6 +30,8 @@ job:
         - /home/stack/tempest/*.xml
         - /home/stack/tempest/*.log
         - /home/stack/tempest/etc/*.conf
+        - /var/lib/puppet/state/*.yaml
+        - /var/run/heat-config
 
 #required while rdo/osp-manager requires both rhos and rdo
 product:
