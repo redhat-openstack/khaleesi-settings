@@ -1,7 +1,7 @@
 tmp:
     anchors:
     - &rpmurl 'https://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo-1.noarch.rpm'
-    - &repo_url 'https://repos.fedorapeople.org/repos/openstack/openstack-kilo/'
+    - &repo_url 'http://trunk.rdoproject.org/centos7-liberty/current/'
 
 product:
     full_version: liberty
@@ -10,7 +10,7 @@ product:
         major: 8
         minor: 0
         code_name: liberty
-    rpm:
+    rpmrepo:
         CentOS: *rpmurl
         Fedora: *rpmurl
         RedHat: *rpmurl
