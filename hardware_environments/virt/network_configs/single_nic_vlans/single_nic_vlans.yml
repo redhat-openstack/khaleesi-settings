@@ -9,3 +9,6 @@ parameter_defaults:
   ExternalAllocationPools: [{'start': '172.16.23.10', 'end': '172.16.23.100'}]
   ExternalInterfaceDefaultRoute: 172.16.23.251
   NeutronExternalNetworkBridge: "''"
+  ControlPlaneSubnetCidr: "24"
+  ControlPlaneDefaultRoute: 192.0.2.1
+  EC2MetadataIp: 192.0.2.1
