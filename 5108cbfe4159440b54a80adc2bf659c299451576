@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ae5cdf2_54e76e12",
+        "filename": "settings/product/rdo/version/liberty.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000935
+      },
+      "writtenOn": "2015-09-15T07:38:12Z",
+      "side": 0,
+      "message": "Unrelated to this change but question for Wes: I wonder why are there both rpmurl and repo_url for the same thing?",
+      "revId": "5108cbfe4159440b54a80adc2bf659c299451576",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}

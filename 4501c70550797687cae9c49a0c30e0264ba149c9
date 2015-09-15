@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ae5cdf2_b417d2ec",
+        "filename": "settings/product/rdo/version/liberty.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000935
+      },
+      "writtenOn": "2015-09-15T07:38:12Z",
+      "side": 1,
+      "message": "Is version/liberty is for GA?\nRDO Liberty will be EL7 and provided via CentOS CloudSIG repos (not created yet):\n\nProduction: mirror.centos.org/centos/7/cloud/x86_64/openstack-liberty/\n\nTesting: buildlogs.centos.org/centos/7/cloud/x86_64/openstack-liberty/\n\ncentos-release-openstack-liberty RPM will be provided in CentOS Extras repo so on CentOS yum install centos-release-openstack-liberty will work out of the box.",
+      "revId": "4501c70550797687cae9c49a0c30e0264ba149c9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ae5cdf2_34e3c208",
+        "filename": "settings/product/rdo/version/liberty.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000935
+      },
+      "writtenOn": "2015-09-15T07:38:12Z",
+      "side": 1,
+      "message": "This isn\u0027t correct if version/liberty is for production repos.\n\ncentos7-liberty/current/ is now pointing to Delorean Trunk and will become separate Delorean Liberty instance building from stable/liberty branches when they\u0027re created, like we have Delorean Kilo now.",
+      "revId": "4501c70550797687cae9c49a0c30e0264ba149c9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
