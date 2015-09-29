@@ -1,6 +1,6 @@
 tester:
     setup: rpm
     rpm:
-        url: http://10.8.51.111/delorean/repos/current/
+        url: http://trunk.rdoproject.org/centos7/current/
         release: master
     use_virtual_env: false
