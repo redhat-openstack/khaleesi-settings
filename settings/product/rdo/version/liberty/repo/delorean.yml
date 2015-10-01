@@ -1,6 +1,6 @@
 tmp:
     anchors:
-      - &centos_repo_url http://trunk.rdoproject.org/centos7-liberty/
+      - &centos_repo_url http://trunk.rdoproject.org/liberty/centos7
 
 product:
     short_repo: dln
