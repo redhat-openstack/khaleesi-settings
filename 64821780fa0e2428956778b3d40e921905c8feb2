@@ -1,0 +1,9 @@
+Code-Review+1: John Trowbridge <trown@redhat.com>
+Code-Review+1: mathieu bultel <mat.bultel@gmail.com>
+Code-Review+2: wes hayutin <weshayutin@gmail.com>
+Verified+1: wes hayutin <weshayutin@gmail.com>
+Submitted-by: wes hayutin <weshayutin@gmail.com>
+Submitted-at: Mon, 05 Oct 2015 13:48:44 +0200
+Reviewed-on: https://review.gerrithub.io/245263
+Project: redhat-openstack/khaleesi-settings
+Branch: refs/heads/master
