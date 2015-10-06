@@ -1,0 +1,31 @@
+tmp:
+    anchors:
+      # Example baseurl: http://trunk.rdoproject.org/centos7-liberty/a3/28/a328c134b1776bd34b720171967af5c94014529f_67835623
+      - &centos_repo_url !env baseurl
+
+product:
+    short_repo: dln
+    repo_type: delorean
+    repo:
+        delorean:
+            # Khaleesi will suffix /current/ to the repo_url, this hack
+            # is to maintain backwards compatibility
+            repo_file: ../delorean.repo
+            CentOS:
+                '7.0': !join [*centos_repo_url]
+                '7.0.1406': !join [*centos_repo_url]
+                '7.1.1503': !join [*centos_repo_url]
+            RedHat:
+                '7.0': !join [*centos_repo_url]
+                '7.1': !join [*centos_repo_url]
+        delorean_deps:
+            # delorean-deps is outside of the baseurl, this hack is to
+            # maintain backwards compatibility
+            repo_file: ../../../delorean-deps.repo
+            CentOS:
+                '7.0': !join [*centos_repo_url]
+                '7.0.1406': !join [*centos_repo_url]
+                '7.1.1503': !join [*centos_repo_url]
+            RedHat:
+                '7.0': !join [*centos_repo_url]
+                '7.1': !join [*centos_repo_url]
