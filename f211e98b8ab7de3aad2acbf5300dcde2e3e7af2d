@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baada198_b8c61948",
+        "filename": "settings/product/rdo/version/generic/repo/delorean.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1003529
+      },
+      "writtenOn": "2015-10-08T11:01:08Z",
+      "side": 1,
+      "message": "I am a bit confused why we are using environment variables with khaleesi.  Seems like another layer of abstraction on an overly abstracted system.",
+      "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_d8c3cd36",
+        "filename": "settings/product/rdo/version/generic/repo/delorean_mgt.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1003529
+      },
+      "writtenOn": "2015-10-08T11:01:08Z",
+      "side": 1,
+      "message": "this whole file probably does not need to exist.\n\nAnything with trunk-mgt.rdoproject.org is obsolete.",
+      "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_f8c0912c",
+        "filename": "settings/product/rdo/version/generic/repo/delorean_mgt_only.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1003529
+      },
+      "writtenOn": "2015-10-08T11:01:08Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
