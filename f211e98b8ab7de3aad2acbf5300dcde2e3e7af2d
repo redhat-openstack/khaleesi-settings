@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "baada198_7b739bb1",
+        "filename": "settings/product/rdo/version/generic/repo/delorean.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-08T13:49:54Z",
+      "side": 1,
+      "message": "The whole purpose of this patchset is to provide a way for jenkins to pass the baseurl of a repo from one job to the other. Right now, jenkins will write a properties file that can be read by other jobs and exported as environment variables.\nSurely there are other ways, this is the one I was able to come up with. Please do speak up if there is a better way to achieve this - I am by no means a jenkins expert.",
+      "parentUuid": "baada198_b8c61948",
+      "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baada198_d8c3cd36",
         "filename": "settings/product/rdo/version/generic/repo/delorean_mgt.yml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-08T11:01:08Z",
       "side": 1,
       "message": "this whole file probably does not need to exist.\n\nAnything with trunk-mgt.rdoproject.org is obsolete.",
+      "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_9b678fea",
+        "filename": "settings/product/rdo/version/generic/repo/delorean_mgt.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-08T13:49:54Z",
+      "side": 1,
+      "message": "Thanks, I didn\u0027t know so I left it.",
+      "parentUuid": "baada198_d8c3cd36",
       "revId": "f211e98b8ab7de3aad2acbf5300dcde2e3e7af2d",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
