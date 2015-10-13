@@ -1,0 +1,15 @@
+--- !extends:../topology/all-in-one.yml
+installer:
+    packstack:
+        variant: aio
+provisioner:
+    images:
+        centos:
+            "7.1":
+                id: not_used
+                remote_user: not_used
+            "7.0":
+                id: not_used
+                remote_user: not_used
+    flavor:
+        large: 0
