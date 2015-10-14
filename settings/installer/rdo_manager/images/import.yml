@@ -2,7 +2,12 @@
 installer:
   overcloud_images: import
   images:
-        rhos:
-          '7-director':
-            rhel:
-              '7.1': "http://rhos-release.REPLACE_ME/mburns/latest-images/"
+    files:
+      - deploy-ramdisk-ironic
+      - discovery-ramdisk
+      - overcloud-full
+    url:
+      rhos:
+        '7-director':
+          rhel:
+            '7.1': !lookup private.installer.images.rhos.7_director.rhel.7.1
