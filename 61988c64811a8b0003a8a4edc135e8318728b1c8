@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab29df4_dd057b15",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000586
+      },
+      "writtenOn": "2015-10-15T21:02:44Z",
+      "side": 1,
+      "message": "are values required here? It looks like you needed the keys w/ some value.",
+      "revId": "61988c64811a8b0003a8a4edc135e8318728b1c8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
