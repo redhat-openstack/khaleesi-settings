@@ -16,6 +16,24 @@
       "revId": "61988c64811a8b0003a8a4edc135e8318728b1c8",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab29df4_79839acc",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000776
+      },
+      "writtenOn": "2015-10-19T16:10:04Z",
+      "side": 1,
+      "message": "there are !lookups in other settings files that depend on these keys being defined. however they are not used for centosci provisioner based runs.",
+      "parentUuid": "9ab29df4_dd057b15",
+      "revId": "61988c64811a8b0003a8a4edc135e8318728b1c8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
