@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9ab29df4_6963c71a",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-20T16:53:59Z",
+      "side": 1,
+      "message": "ok so doing an extend (as per my comment on the first line) covers the all-in-one.yml and for tester, do we really want to use an external tester for aio ? I\u0027ve been thinking to leverage the tempest installed locally.",
+      "parentUuid": "9ab29df4_e9c9975b",
+      "revId": "fc1f377955c9f797e0a35cef7eb5688e747d766b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab29df4_af1404f6",
         "filename": "settings/installer/packstack/variant/aio.yml",
         "patchSetId": 2
