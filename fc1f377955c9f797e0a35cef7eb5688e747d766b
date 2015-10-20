@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab29df4_af1404f6",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-20T01:40:07Z",
+      "side": 1,
+      "message": "This crashes ksgen because it attempts to merge an int against an str: \"configure.ConfigurationError: cannot merge type \u0027int\u0027 with type \u0027str\u0027 for key \u0027large\u0027\". Putting 0 works.",
+      "revId": "fc1f377955c9f797e0a35cef7eb5688e747d766b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
