@@ -1,0 +1,9 @@
+---
+installer:
+    packstack:
+        service:
+            heat_cfn: true
+
+job:
+    archive:
+        - /etc/heat

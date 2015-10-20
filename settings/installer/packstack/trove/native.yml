@@ -1,9 +1,11 @@
 ---
 installer:
     packstack:
+        service:
+            trove: true
         config:
             CONFIG_TROVE_INSTALL: y
 
 job:
-  archive:
-  - /etc/trove
+    archive:
+        - /etc/trove

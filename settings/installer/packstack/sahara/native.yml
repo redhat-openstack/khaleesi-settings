@@ -2,6 +2,7 @@
 
 installer:
     packstack:
+        service:
+            sahara: true
         config:
             CONFIG_SAHARA_INSTALL: y
-

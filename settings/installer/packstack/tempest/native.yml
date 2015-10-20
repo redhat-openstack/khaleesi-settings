@@ -1,10 +1,12 @@
 ---
 installer:
     packstack:
+        service:
+            tempest: true
         config:
             CONFIG_PROVISION_DEMO: y
             CONFIG_PROVISION_TEMPEST: y
 
 job:
-  archive:
-  - /var/lib/tempest
+    archive:
+        - /var/lib/tempest
