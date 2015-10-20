@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ab29df4_8512c160",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-20T14:10:06Z",
+      "side": 1,
+      "message": "It looks like it would make sense for this to extend ../topology/all-in-one.yml as it\u0027s a dependency from what I can see. What do you think ?\nFor using this on top of the openstack provisioner, I had to either set --installer-topology\u003dall-in-one or set this to --- !extends:../topology/all-in-one.yml.",
+      "revId": "fc1f377955c9f797e0a35cef7eb5688e747d766b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab29df4_af1404f6",
         "filename": "settings/installer/packstack/variant/aio.yml",
         "patchSetId": 2
