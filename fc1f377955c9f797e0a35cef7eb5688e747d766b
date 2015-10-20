@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "9ab29df4_6982e753",
+        "filename": "settings/installer/packstack/variant/aio.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006219
+      },
+      "writtenOn": "2015-10-20T14:35:29Z",
+      "side": 1,
+      "message": "just a FYI, overriding the provisioner here breaks the openstack provisioner since it pulls in the glance image IDs - I removed it in my testing. How is it a problem to leave this part out for the ci.centos provisioner ?",
+      "revId": "fc1f377955c9f797e0a35cef7eb5688e747d766b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab29df4_af1404f6",
         "filename": "settings/installer/packstack/variant/aio.yml",
         "patchSetId": 2
