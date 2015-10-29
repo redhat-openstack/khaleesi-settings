@@ -1,8 +1,8 @@
 # Note: there is no rdo-release rpm for liberty, using the src rpm for kilo as a no-op
 tmp:
     anchors:
-    - &rpmurl 'https://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo-1.src.rpm'
-    - &repo_url 'http://trunk.rdoproject.org/liberty/centos7/current/'
+    - &rpmurl 'http://rdoproject.org/repos/openstack-liberty/rdo-release-liberty.rpm'
+    - &repo_url 'http://rdoproject.org/repos/openstack-liberty/'
 
 product:
     full_version: liberty
