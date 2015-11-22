@@ -13,7 +13,7 @@ parameter_defaults:
   InternalApiAllocationPools: [{'start': '172.16.20.10', 'end': '172.16.20.100'}]
   StorageAllocationPools: [{'start': '172.16.21.10', 'end': '172.16.21.100'}]
   TenantAllocationPools: [{'start': '172.16.22.10', 'end': '172.16.22.100'}]
-  ExternalAllocationPools: [{'start': '172.16.23.10', 'end': '172.16.23.100'}]
+  ExternalAllocationPools: [{'start': '172.16.23.110', 'end': '172.16.23.150'}]
   ExternalInterfaceDefaultRoute: 172.16.23.251
   NeutronExternalNetworkBridge: "''"
   ControlPlaneSubnetCidr: "24"
