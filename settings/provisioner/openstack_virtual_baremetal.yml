@@ -1,5 +1,0 @@
---- !extends:common-bm.yml
-provisioner:
-    type: openstack_virtual_baremetal
-    network:
-        type: none

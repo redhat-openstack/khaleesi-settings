@@ -1,9 +1,0 @@
-provisioner:
-    auth_url: !env OS_AUTH_URL
-    network:
-        name: external
-        type: neutron
-    flavor:
-        small: 2
-        medium: 3
-        large: 4

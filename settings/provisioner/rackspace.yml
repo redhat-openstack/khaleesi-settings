@@ -1,3 +1,0 @@
---- !extends:common.yml
-provisioner:
-    type: rackspace

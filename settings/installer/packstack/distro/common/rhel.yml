@@ -1,3 +1,0 @@
-packstack:
-    config:
-        CONFIG_USE_EPEL: !lookup product.config.enable_epel

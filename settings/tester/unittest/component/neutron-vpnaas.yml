@@ -1,5 +1,0 @@
-component:
-  name: neutron-vpnaas
-  short_name: ntrn-vpn
-  dir: !join [ !env PWD, /../neutron-vpnaas]
-

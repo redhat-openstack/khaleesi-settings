@@ -1,5 +1,0 @@
-component:
-  name: glance
-  short_name: gl
-  dir: !join [ !env PWD, /../glance]
-

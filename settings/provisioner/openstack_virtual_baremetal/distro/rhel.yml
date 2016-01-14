@@ -1,5 +1,0 @@
----
-provisioner:
-    distro:
-        name: rhel
-    host_cloud_user: cloud-user

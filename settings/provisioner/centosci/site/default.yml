@@ -1,2 +1,0 @@
-provisioner:
-    url: 'http://admin.ci.centos.org:8080/'

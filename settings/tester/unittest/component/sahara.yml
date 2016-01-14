@@ -1,5 +1,0 @@
-component:
-  name: sahara
-  short_name: sah
-  dir: !join [ !env PWD, /../sahara]
-

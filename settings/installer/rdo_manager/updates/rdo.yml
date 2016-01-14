@@ -1,7 +1,0 @@
-installer:
-    updates:
-        name: rdo
-        enabled: true
-
-defaults:
-    version: latest

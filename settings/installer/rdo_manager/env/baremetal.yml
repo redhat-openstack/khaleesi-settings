@@ -1,3 +1,0 @@
-installer:
-    env:
-        type: 'baremetal'

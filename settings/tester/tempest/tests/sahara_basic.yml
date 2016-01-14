@@ -1,5 +1,0 @@
-tester:
-    tempest:
-        test_regex: tempest.*\.data_processing
-        whitelist: []
-        blacklist: []

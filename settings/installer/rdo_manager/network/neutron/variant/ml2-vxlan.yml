@@ -1,4 +1,0 @@
-installer:
-    network:
-        plugin: ml2
-        variant: vxlan

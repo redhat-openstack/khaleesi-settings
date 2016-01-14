@@ -1,5 +1,0 @@
----
-provisioner:
-    distro:
-        name: centos
-    beaker_arch: x86_64

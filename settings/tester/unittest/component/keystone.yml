@@ -1,5 +1,0 @@
-component:
-  name: keystone
-  short_name: keys
-  dir: !join [ !env PWD, /../keystone]
-

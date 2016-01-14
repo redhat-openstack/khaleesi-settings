@@ -1,4 +1,0 @@
---- !extends:common/all.yml
-
-job:
-    dummy: foo

@@ -1,4 +1,0 @@
----
-provisioner:
-    beaker_family: Fedora20
-    beaker_distro: Fedora-20

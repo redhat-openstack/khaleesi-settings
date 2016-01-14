@@ -1,5 +1,0 @@
----
-tester:
-  git:
-    repo: http://REPLACE_ME/git/users/psedlak/rhos-qe-tests.git
-    revision: HEAD

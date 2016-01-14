@@ -1,4 +1,0 @@
----
-installer:
-    network:
-        isolation: bond_with_vlans

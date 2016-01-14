@@ -1,5 +1,0 @@
-component:
-  name: neutron-lbaas
-  short_name: ntrn-lb
-  dir: !join [ !env PWD, /../neutron-lbaas]
-

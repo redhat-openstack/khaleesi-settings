@@ -1,7 +1,0 @@
---- !extends:minimal.yml
-installer:
-    nodes:
-        node_count: 5
-        controller:
-            scale: 3
-

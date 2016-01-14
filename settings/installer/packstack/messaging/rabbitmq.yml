@@ -1,7 +1,0 @@
-installer:
-    messaging:
-        variant: rabbitmq
-
-    packstack:
-        config:
-            CONFIG_AMQP_BACKEND: !lookup installer.messaging.variant

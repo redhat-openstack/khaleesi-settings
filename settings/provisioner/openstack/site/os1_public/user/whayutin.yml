@@ -1,6 +1,0 @@
---- !extends:../tenant/rdo-ci.yml
-
-provisioner:
-    username: whayutin
-    password: override password
-

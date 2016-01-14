@@ -1,5 +1,0 @@
----
-provisioner:
-    distro:
-        name: centos
-    host_cloud_user: centos

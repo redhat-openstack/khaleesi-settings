@@ -1,4 +1,0 @@
-provisioner:
-    distro:
-        name: centos
-    arch: x86_64

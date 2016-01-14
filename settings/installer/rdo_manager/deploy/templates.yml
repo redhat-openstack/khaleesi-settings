@@ -1,4 +1,0 @@
-installer:
-    deploy:
-        type: templates
-        command: '--templates'

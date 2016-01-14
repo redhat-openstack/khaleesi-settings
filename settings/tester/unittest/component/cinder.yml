@@ -1,5 +1,0 @@
-component:
-  name: cinder
-  short_name: cndr
-  dir: !join [ !env PWD, /../cinder]
-

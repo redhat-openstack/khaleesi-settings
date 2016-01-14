@@ -1,5 +1,0 @@
-component:
-  name: ceilometer
-  short_name: ceil
-  dir: !join [ !env PWD, /../ceilometer]
-

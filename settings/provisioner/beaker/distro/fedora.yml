@@ -1,6 +1,0 @@
----
-provisioner:
-    distro:
-        name: fedora
-    beaker_arch: x86_64
-    beaker_variant: Server

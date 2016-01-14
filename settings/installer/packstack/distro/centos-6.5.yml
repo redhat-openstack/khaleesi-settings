@@ -1,5 +1,0 @@
---- !extends:common/rhel.yml
-
-
-packstack:
-    distro: CentOS 6.5
