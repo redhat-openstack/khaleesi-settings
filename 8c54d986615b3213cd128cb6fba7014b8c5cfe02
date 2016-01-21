@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_fc54ae55",
+        "filename": "hardware_environments/virt/network_configs/single_nic_vlans_ipv6/hw_settings.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004788
+      },
+      "writtenOn": "2016-01-21T17:06:52Z",
+      "side": 1,
+      "message": "4 spaces (according to community guidelines)",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 27
+      },
+      "revId": "8c54d986615b3213cd128cb6fba7014b8c5cfe02",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_5c4a1aad",
+        "filename": "hardware_environments/virt/network_configs/single_nic_vlans_ipv6/single_nic_vlans_ipv6.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1004788
+      },
+      "writtenOn": "2016-01-21T17:06:52Z",
+      "side": 1,
+      "message": "same here",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 70
+      },
+      "revId": "8c54d986615b3213cd128cb6fba7014b8c5cfe02",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
