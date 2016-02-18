@@ -2,6 +2,7 @@ hw_env:
   env_type: virt
   libvirt_type: qemu
   network_cidr: 192.168.0.0/24
+  floating_ip_version: 4
   floating_ip_end: 192.0.2.100
   floating_ip_start: 192.0.2.50
   floating_ip_cidr: 192.0.2.0/24
