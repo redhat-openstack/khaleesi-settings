@@ -5,6 +5,7 @@
   libvirt_type: qemu
   network_cidr: 192.168.0.0/24
   network: '172.25.0'
+  floating_ip_version: 4
   floating_ip_end: 172.25.0.100
   floating_ip_start: 172.25.0.50
   floating_ip_cidr: 172.25.0.0/24
