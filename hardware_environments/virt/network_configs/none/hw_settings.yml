@@ -10,3 +10,4 @@ hw_env:
   network_type: flat
   physical_network: datacentre
   ExternalNetworkVlanID: null
+  dns_server: 192.168.122.1
